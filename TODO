@@ -6,9 +6,16 @@ Añadir el zero a la página de hardware
 
 Apéndice: Arduino zero ¿está en el avanzado?
 
+## Programando Arduino
+
+3.1 El entorno bitbloq
+
+
 ## 4 Conectando con el mundo físico
 
-4.3 Entradas y salidas digitales: Adaptar a bitbloq
+4.3 Entradas y salidas digitales: 
+	Adaptar a bitbloq 
+	Repasar formato del texto
 
 4.4 Entradas y salidas analógicas: Adaptar a bitbloq
 
