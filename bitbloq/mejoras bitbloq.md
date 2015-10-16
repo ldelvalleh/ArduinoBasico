@@ -5,3 +5,5 @@
 * Añadir que hay que cuidado con los led sin resistencia!!!
 
 * Cables y led de colores!!!
+
+* ¡¡¡No pudo abrir un fichero desde modo anonimo!!!
