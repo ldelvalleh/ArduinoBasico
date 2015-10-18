@@ -156,7 +156,7 @@ Veamos como podemos usar las entradas y salidas digitales
 
 ## Entradas analógicas 
 
-[[video]](https://youtu.be/nChCA1Qc0uo)[ejemplo](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/entrada%20analogica.json)
+[[video]](https://youtu.be/nChCA1Qc0uo)[[ejemplo]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/entrada%20analogica.json)
 
 ![entradasanalogicas](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/entrada%20analogica.png)
 
