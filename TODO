@@ -6,6 +6,8 @@ Añadir el zero a la página de hardware
 Explicar como añadir ficheros boards
 Apéndice: Arduino zero ¿está en el avanzado?
 
+* ¿Funcion offline?
+
 ## Programando Arduino
 
 3.1 El entorno bitbloq
@@ -30,7 +32,8 @@ Apéndice: Arduino zero ¿está en el avanzado?
 	Adaptar a bitbloq 
 
 3 Apéndice - Introducción a la programación en Bitbloq 
-	Todo
+	Todos los videos y capturas hechos
+
 	
 ## 4 Conectando con el mundo físico
 
@@ -40,3 +43,6 @@ Apéndice: Arduino zero ¿está en el avanzado?
 
 4.4 Entradas y salidas analógicas: Adaptar a bitbloq
 
+Funciones
+clases
+Salidas analógicas
