@@ -7,9 +7,7 @@ Podemos acceder directamente desde su web  http://bitbloq.bq.com/
 
 Funciona mejor con Chrome en todos los sistemas operativos, y al usarlo te dirá si necesitas drivers o instalar algún complemento en tu sistema
 
-A lo largo de estos vídeos veremos algunas de sus características más importantes. Puedes encontrar más tutoriales en la página [oficial de bitbloq](http://diwo.bq.com/tag/bitbloq-2/)
-
-
+A lo largo de estos vídeos veremos algunas de sus características más importantes. 
 
 ## Introducción a la programacion con bitbloq: 
 
@@ -81,26 +79,27 @@ Entre estas condiciones utilizaremos operadores lógicos que pueden ser AND o OR
 
 
 ## Envío de datos al PC: 
-[[vídeo]](http://youtu.be/uAy_reYl8_Y) [[ejemplo]](./ejemplosBitbloq/Serial.xml) 
+[[vídeo]](https://youtu.be/hy9t76RLeBU) [[ejemplo]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/comunicacion%20serie.json) 
 
-![serial](./ejemplosBitbloq/Datos_al_pc.png)
+![serial](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/comunicacion%20serie.png)
 
 Podemos enviar contenidos entre nuestra placa y el PC usando las sentencias de comunicaciones. Usaremos print para enviar algo (puede ser el valor de una variable o un texto) al pc o println para enviar y pasar a la siguiente línea.
 
 ## Variables locales vs Variables globales
-[vídeo](http://youtu.be/D82lXUWH1Jg) [ejemplo](./ejemplosBitbloq/variables_locals_globales.xml)
 
-![ejemplo](./ejemplosBitbloq/variables_locals_globales.png)
+[vídeo](https://youtu.be/U3ulo7rAE58) [ejemplo](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/variables%20globales.json)
+
+![ejemplo](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/variables%20globales.png)
 
 Podemos definir variables locales o globales. Una variable global estará definida y por tanto mantendrá su valor en todo el programa, mientras que una variable local solo se definirá donde se haya declarado.
 
 Las variables globales mantienen su valor entre las distintas iteraciones que se realizan del programa.
 
-## Ejemplo de bucle sin sentencias de control
+## ¿¿¿ Ejemplo de bucle sin sentencias de control ???
 
 ![ejemplo](.ejemplosBitbloq/Bitbloq_bucle_globales.png)  [[ejemplo]](.ejemplosBitbloq/bucle_con_variable_global.xml)
 
-Podemos usar la forma cíclica en la que se ejecutan los programas en Arduino para hacer un bucle sin más estructuras de control que una simple variable global
+Podemos usar la forma cíclica (y unas variables globales) en la que se ejecutan los programas en Arduino para hacer un bucle sin más estructuras de control que una simple variable global
 
 ### Sonido
 
@@ -112,7 +111,7 @@ En bitbloq existen 2 formas de generar sonidos
 
 ![imagen](./ejemplosBitbloq/sonido.png) [[ejemplo]](./ejemplosBitbloq/sonido.xml)
 
-## Librerías
+## ¿¿¿¿¿ Librerías ????
 
 En el caso de Bitbloq, ahora mismo no se pueden usar librerías, de forma manual.
 
@@ -125,8 +124,15 @@ Para usar la librería Servo con bitbloq podemos usar los bloques Servo. Existen
 
 ## Entradas y salidas digitales
 
-![imagen](./ejemplosBitbloq/Pulsador.png) [[ejemplo]](./ejemplosBitbloq/Pulsador.xml)
+Veamos como podemos usar las entradas y salidas digitales
 
-## Salidas analógicas (PWM)
+![imagen](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/pines%20digitales.png) [[ejemplo]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/pines%20digitales.json)
+
+## ¿¿¿¿ Salidas analógicas (PWM) ????
+
 
 ![imagen](./ejemplosBitbloq/Salida_Analogica.png) [[ejemplo]](./ejemplosBitbloq/Salida_Analogica.xml)
+
+
+Puedes encontrar más tutoriales en la página [oficial de bitbloq](http://diwo.bq.com/tag/bitbloq-2/)
+
