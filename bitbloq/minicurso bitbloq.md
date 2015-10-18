@@ -56,13 +56,17 @@ Necesitamos  declarar una variables que actuará como contador y definir el valo
 Usaremos la sentencia de control **while** para los bucles donde el número de veces que se repite no está definido desde el principio
 
 ### Bloque **if** : sentencias condicionales
-[[vídeo]](http://youtu.be/dXpDCOzsO2U) [[ejemplo]](./ejemplosBitbloq/condicional.xml)
+[[vídeo]](https://youtu.be/RTtn_77pZY4	) [[ejemplo]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/condiconales.json)
 
-![condicional](./ejemplosBitbloq/condicional.png)
+![condicional](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/condicionales.png)
 
 Las sentencias condicionales permiten ejecutar un código y otro según se cumpla o no una determinada condición. Esta condición será una validación que definiremos con operandos.
 
-Podemos hacer que en caso de que se cumpla se ejecute un código (es el bloque if) y en caso de que no se cumpla la condición se ejecute otro (bloque else)
+Podemos hacer que en caso de que se cumpla se ejecute un código (es el bloque if) y en caso de que no se cumpla la condición se ejecute otro (bloque else). Veamos un ejemplo
+
+[[video]](https://youtu.be/-f_htl5TQN8)[[ejemplo]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/condicional%20compleja.json)
+
+![ejemplo](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/concional%20compleja.png)
 
 ### Condicionales complejas
 [[vídeo]](http://youtu.be/en_Y-_wVyO0) [[ejemplo]](./ejemplosBitbloq/condiciones_if.xml)
