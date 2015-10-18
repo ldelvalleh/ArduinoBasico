@@ -11,26 +11,18 @@ Apéndice: Arduino zero ¿está en el avanzado?
 ## Programando Arduino
 
 3.1 El entorno bitbloq
-	Vídeo Introducción a la programación en bitbloq
+	~~ Vídeo Introducción a la programación en bitbloq ~~
 
-	Comentamos dónde funciona y lo que necesitamos
-	Hacemos un parpadeo
-		primero sin espera
-		añadimos espera
-		¿cómo guardarlo?
-
-	Falta Vídeo de cómo cargar!!!!
-
-	¿¿¿ Librerias ???
-* ¿¿¿¿¿ Seleccionar la frecuencia exacta que queremos reproducir y su duración ???
+	
+	¿¿¿¿¿ Seleccionar la frecuencia exacta que queremos reproducir y su duración ???
 	¿¿¿ Salidas analógicas ???
 	¿¿¿ Condicionales compuestas ???
 
 3.4 Primeros pasos 
 	¿Añadir bitbloq?
 
-3.5 Comenzando a programar en Arduino
-	Adaptar a bitbloq 
+3.5 ~~ Comenzando a programar en Arduino
+	Adaptar a bitbloq  ~~
 
 3.6 Librerías
 	Añadir forma moderna
