@@ -42,6 +42,22 @@ Las funciones de pin son las distintas formas que tenemos de manejar los pines d
 
 ## Sentencias de control
 
+[[video]](https://youtu.be/dakh7MTxpBg)
+
+Las sentencias de control son aquellas que nos permite modificar el orden o el modo en el que e ejecutan los bloques de nuestro programa
+
+### Variables
+
+Para utilizar necesitaremos el concepto de variables: que no es otra cosa que un lugar donde almacenar un valor que puede se modificar si así lo queremos
+
+[[video]](https://youtu.be/Os-8oHBKsQU)
+
+Con las variables podemos realizar operaciones matemáticas
+
+[[video]](https://youtu.be/nvRUCZERScE)  [[ejemplo]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/operaciones%20variables.json)
+
+![ejemplo](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/operaciones%20variables.png)
+
 ### Bucle **for**
 [[vídeo]](https://youtu.be/mIAgTdc4oC8) [[ejemplo]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/bucle%20for.json)
 
