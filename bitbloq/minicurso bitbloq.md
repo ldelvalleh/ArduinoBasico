@@ -148,7 +148,11 @@ Para usar la librería Servo con bitbloq podemos usar los bloques Servo. Existen
 
 Veamos como podemos usar las entradas y salidas digitales
 
-![imagen](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/pines%20digitales.png) [[ejemplo]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/pines%20digitales.json)
+[[video]](https://youtu.be/GmvUamkeG4Y) [[ejemplo]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/pines%20digitales.json)
+
+
+
+![imagen](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/pines%20digitales.png) 
 
 ## ¿¿¿¿ Salidas analógicas (PWM) ????
 
