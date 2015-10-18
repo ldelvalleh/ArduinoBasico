@@ -41,9 +41,9 @@ Las funciones de pin son las distintas formas que tenemos de manejar los pines d
 ## Sentencias de control
 
 ### Bucle **for**
-[[vídeo]](http://youtu.be/0Af8VdF6h24) [[ejemplo]](./ejemplosBitbloq/bucle_for.xml)
+[[vídeo]](https://youtu.be/mIAgTdc4oC8) [[ejemplo]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/bucle%20for.json)
 
-![bucle for](./ejemplosBitbloq/Bucle_for.png)
+![bucle for](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/bucle%20for.png)
 
 El bucle **for** permite repetir un conjunto de pasos un número de veces determinado. 
 Necesitamos  declarar una variables que actuará como contador y definir el valor inicial que tendrá la variable y el final, realizándose tantos como pasos como valores enteros haya entre ambas.
