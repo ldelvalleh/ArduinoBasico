@@ -117,9 +117,11 @@ Podemos definir variables locales o globales. Una variable global estará defini
 
 Las variables globales mantienen su valor entre las distintas iteraciones que se realizan del programa.
 
-## ¿¿¿ Ejemplo de bucle sin sentencias de control ???
+## Ejemplo de bucle sin sentencias de control
 
-![ejemplo](.ejemplosBitbloq/Bitbloq_bucle_globales.png)  [[ejemplo]](.ejemplosBitbloq/bucle_con_variable_global.xml)
+![ejemplo](.ejemplosBitbloq/Bitbloq_bucle_globales.png)  [[ejemplo]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/ejemplo%20bucle%20arduino.json)
+
+![ejemplo](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/ejemplo%20bucle%20arduino.png)
 
 Podemos usar la forma cíclica (y unas variables globales) en la que se ejecutan los programas en Arduino para hacer un bucle sin más estructuras de control que una simple variable global
 
