@@ -49,9 +49,9 @@ El bucle **for** permite repetir un conjunto de pasos un número de veces determ
 Necesitamos  declarar una variables que actuará como contador y definir el valor inicial que tendrá la variable y el final, realizándose tantos como pasos como valores enteros haya entre ambas.
 
 ### Bucle **while** 
-[[vídeo]](http://youtu.be/894D9hV8paw) [[ejemplo]](./ejemplosBitbloq/bucle_while.xml)
+[[vídeo]](https://youtu.be/RVcaaz1NYjk) [[ejemplo]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/bucle%20while.json)
 
-![bucle while](./ejemplosBitbloq/Bucle_while.png)
+![bucle while](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/bucle%20mientras.png)
 
 Usaremos la sentencia de control **while** para los bucles donde el número de veces que se repite no está definido desde el principio
 
