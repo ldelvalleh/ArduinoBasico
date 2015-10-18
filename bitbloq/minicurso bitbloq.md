@@ -117,9 +117,9 @@ Podemos definir variables locales o globales. Una variable global estará defini
 
 Las variables globales mantienen su valor entre las distintas iteraciones que se realizan del programa.
 
-## Ejemplo de bucle sin sentencias de control
+## Ejemplo de bucle sin sentencias de control ???
 
-![ejemplo](.ejemplosBitbloq/Bitbloq_bucle_globales.png)  [[ejemplo]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/ejemplo%20bucle%20arduino.json)
+[[ejemplo]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/ejemplo%20bucle%20arduino.json)
 
 ![ejemplo](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/ejemplo%20bucle%20arduino.png)
 
@@ -131,9 +131,10 @@ En bitbloq existen 2 formas de generar sonidos
 
 * Reproducir notas musicales: podemos escoger la nota que vamos a reproducir y su duración
 
-* Seleccionar la frecuencia exacta que queremos reproducir y su duración
 
-![imagen](./ejemplosBitbloq/sonido.png) [[ejemplo]](./ejemplosBitbloq/sonido.xml)
+* ¿¿¿¿¿ Seleccionar la frecuencia exacta que queremos reproducir y su duración ???
+
+![imagen](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/sonido.png) [[ejemplo]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/sonido.json)
 
 ## ¿¿¿¿¿ Librerías ????
 
