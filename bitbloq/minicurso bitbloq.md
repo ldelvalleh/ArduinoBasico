@@ -19,19 +19,21 @@ Bitbloq es un entorno de programación visual por bloques que nos permite progra
 
 Además nos permite programar nuestro arduino sin instalar (practicamente) nada en nuestro ordenador
 
+Empezaremos seleccionando el tipo de placa Arduino que vamos a usar y a continuación añadiremos el hardware que usemos conectándolo a las patillas correspondientes.
+
 
 ### Ver código C++ de un programa bitbloq:  
-[[vídeo]](https://www.youtube.com/watch?v=cg1YNVSprdo) 
+https://youtu.be/cg1YNVSprdo) 
 
 Desde bitbloq siempre podemos ver el codigo Arduino generado. De momento no podemos modificar este código pero si copiarlo y llevarlo al IDE de arduino
 
 
 ### Transfiriendo el programa bitbloq a Arduino 
-[[vídeo]](https://www.youtube.com/watch?v=gMe2YDgUUQE) 
+[[vídeo]](https://youtu.be/95oW-hOX9pc) 
 
 Bitbloq nos permite programar nuestro arduino sin instalar (practicamente) nada en nuestro ordenador. Sólo tenemos que pulsar sobre el botón cargar lo que hace que se compile el código, se detecte la placa y se envíe el programa a naestro Arduino
 
-EXPLICAR EL TEMA DE PRIMERO CONFIGURAR EL HARDWARE Y LUEGO EL PROGRAMA
+
 ~~
 Para aprender las funciones de pin en bitbloq  
 [[vídeo]](http://youtu.be/zKs0-vwoxMM) 
