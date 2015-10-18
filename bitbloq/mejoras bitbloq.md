@@ -12,3 +12,5 @@
 * Dificil de manejar los bloques cuando están desactivados. Parece que la mejor forma de moverlos es cuando se pincha en el nombre
 
  * ¿como hace el analogwrite?
+
+ * Sonidos sin nota
