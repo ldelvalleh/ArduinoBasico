@@ -34,11 +34,11 @@ Desde bitbloq siempre podemos ver el codigo Arduino generado. De momento no pode
 Bitbloq nos permite programar nuestro arduino sin instalar (practicamente) nada en nuestro ordenador. Sólo tenemos que pulsar sobre el botón cargar lo que hace que se compile el código, se detecte la placa y se envíe el programa a naestro Arduino
 
 
-~~
+¿¿¿¿
 Para aprender las funciones de pin en bitbloq  
 [[vídeo]](http://youtu.be/zKs0-vwoxMM) 
 
-Las funciones de pin son las distintas formas que tenemos de manejar los pines de arduino. Tenemos las mismas sentencias que en arduino (en el menú Funciones de Pin): DigitalWrite, AnalogWrite, DigitalRead y AnalogRead. También podemos usarlas si utilizamos un bloque ZUM o octopus correspondiente. ~~
+Las funciones de pin son las distintas formas que tenemos de manejar los pines de arduino. Tenemos las mismas sentencias que en arduino (en el menú Funciones de Pin): DigitalWrite, AnalogWrite, DigitalRead y AnalogRead. También podemos usarlas si utilizamos un bloque ZUM o octopus correspondiente. ????
 
 ## Sentencias de control
 
