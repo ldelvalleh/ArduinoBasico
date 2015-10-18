@@ -154,6 +154,16 @@ Veamos como podemos usar las entradas y salidas digitales
 
 ![imagen](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/pines%20digitales.png) 
 
+## Entradas analógicas 
+
+[[video]](https://youtu.be/nChCA1Qc0uo)[ejemplo](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/entrada%20analogica.json)
+
+![entradasanalogicas](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/entrada%20analogica.png)
+
+Veamos como leer las entradas digitales
+
+
+
 ## ¿¿¿¿ Salidas analógicas (PWM) ????
 
 
