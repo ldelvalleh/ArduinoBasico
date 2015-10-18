@@ -44,11 +44,11 @@ Las funciones de pin son las distintas formas que tenemos de manejar los pines d
 
 [[video]](https://youtu.be/dakh7MTxpBg)
 
-Las sentencias de control son aquellas que nos permite modificar el orden o el modo en el que e ejecutan los bloques de nuestro programa
+Las sentencias de control son aquellas que nos permite modificar el orden o el modo en el que se ejecutan los bloques de nuestro programa
 
 ### Variables
 
-Para utilizar necesitaremos el concepto de variables: que no es otra cosa que un lugar donde almacenar un valor que puede se modificar si así lo queremos
+Para utilizar las sentencias de control necesitaremos el concepto de variables: que no es otra cosa que un lugar donde almacenar un valor que puede se modificar si así lo queremos
 
 [[video]](https://youtu.be/Os-8oHBKsQU)
 
@@ -89,7 +89,7 @@ Podemos hacer que en caso de que se cumpla se ejecute un código (es el bloque i
 ### Condicionales complejas
 [[vídeo]](http://youtu.be/en_Y-_wVyO0) [[ejemplo]](./ejemplosBitbloq/condiciones_if.xml)
 
-![Condiciones_lógicas](./ejemplosBitbloq/Condiciones_lógicas.png)
+![Condiciones_lógicas](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/concional%20compleja.png)
 
 La condición que determina si se ejecuta un bloque u otro o si salimos de un bloque while puede contener varias comprobaciones. 
 
