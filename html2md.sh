@@ -3,9 +3,10 @@
 clear
 
 FILE=$1
-ORIGIN_FILE="${FILE%.*}"".html"
+FILENOEXTENSION="${FILE%.*}"
+ORIGIN_FILE="$FILENOEXTENSION"".html"
 
-DEST_FILE=$ORIGIN_FILE".md"
+DEST_FILE="$FILENOEXTENSION"".md"
 
 echo $ORIGIN_FILE  " > "  $DEST_FILE
 
@@ -17,6 +18,7 @@ git mv "$ORIGIN_FILE" "html/$ORIGIN_FILE"
 git commit -m "mv" "html/$ORIGIN_FILE"
 git add "$DEST_FILE"
 git commit -m "v0" "$DEST_FILE"
+git commit -m "v0" "html/$ORIGIN_FILE"
 subl "$DEST_FILE"
 
 
