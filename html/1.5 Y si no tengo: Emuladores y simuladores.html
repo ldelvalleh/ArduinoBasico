@@ -1,0 +1,45 @@
+Veamos ahora los simuladores existentes que nos permiten programar y probar nuestro código sin la necesidad de tener una placa Arduino. Hay que decir que existen multitud de proyectos dedicados a simular placas Arduino, tanto comerciales como gratuitos. Esta lista no pretende ser exaustiva sino que se basa en la corta experiencia en este campo de los simuladores del autor.<br><br><br>En caso de encontrar algún otro simulador interesante no dudéis en enviarlo a los foros para que lo estudiemos y lo incluyamos en esta lista.<br><br>
+<table><tbody>
+  <tr>
+    <td><img src="https://assets.circuits.io/assets/home/Home-Anonymous-HubForEveryGoal-ca150801eb74505bbd8d18e31f4d2321.gif" alt="123d" width="150" height="101" style="" class="img-responsive"><br>
+    </td>
+    <td><a href="http://123d.circuit.io">123d.circuit.io</a> es un simulador de arduino en la página del diseñador de circuitos 123d.circuit.io. Nos permite simular perfectamente la mayoría de los montajes del curso. He preparado un <a href="https://www.youtube.com/watch?v=c0edvZIrjUY" title="Breve Tutorial sobre 123d circuits.io"><b>vídeo</b></a> para que aprendáis a usarlo<br>
+    </td>
+  </tr>
+  <tr>
+    <td><img width="150" vspace="0" hspace="10" height="87" border="0" align="left" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQJJtdI1T7wyR5nKleyKsz1ABxrJG6MX82fuKIMPeF4KWvMHMr6" alt="minibloq" title="minibloq">
+    </td>
+    <td> <a href="http://blog.minibloq.org" target="_blank" title="minibloq">Minibloq</a>: Es un entorno de programación de Arduino compuesto por un editor de bloques (al estilo de Scratch). Como salida produce un fichero que podemos introducir en le entorno de Arduino. Está en versión Beta aún. Como incoveniente, no nos permite introducir el código, sino que hemos de usar los bloques predefinidos y a partir de ahí vemos el código resultante.
+    </td>
+  </tr>
+  <tr>
+    <td> <img width="150" vspace="0" hspace="10" height="113" border="0" align="left" src="http://www.robotshop.com/blog/en/files/virtual-breadboard-arduino.jpg" alt="Virtualbreadboard" title="Virtualbreadboard">
+    </td>
+    <td><a href="http://virtualbreadboard.com/" title="virtualbreadboard" target="_blank">Virtualbreadboard</a>: Es un simulador de componentes y de Arduino (también permite simular placas de otra familia de microcontroladores llamadas PicMicro). Es un software <b>comercial de pago</b>. La versión gratuita permite simular los componentes eletrónicos pero no a Arduino. Para ello es necesario adquirir el "Arduino Toolkit".
+    </td>
+  </tr>
+  <tr>
+    <td> <img width="150" vspace="10" hspace="10" height="89" border="0" align="left" title="simulator" alt="simulator" src="http://virtronics.com.au/images/SimForArduino.jpg">
+    </td>
+    <td><a target="_blank" href="http://virtronics.com.au/Simulator-for-Arduino.html">Simulator for Arduino</a>: Software <b>comercial de pago</b> bastante potente y bien terminado. Permite simular el funcionamiento de Arduino y hacer programas. Existe una versión gatuita que impone un retardo al cargar los programas.
+    </td>
+  </tr>
+  <tr>
+    <td><br>
+    </td>
+    <td> <a target="_blank" href="http://">emulino</a> Entorno gratuito de emulación completo. Se requieren conocimientos medios para ponerlo en funcionamiento. Se puede descargar el código de <a href="http://github.com/ghewgill/emulino/tree/master">github</a>. No recomendado si no tienen conocimientos avanzados para compilar programas.<br><br>
+    </td>
+  </tr>
+  <tr>
+    <td> <img width="150" vspace="0" hspace="10" height="116" border="0" align="left" title="ardusim" alt="ardusim" src="http://www.arduinodev.com/wp-content/uploads/2012/02/cbarduino.png">
+    </td>
+    <td><a target="_blank" href="http://sourceforge.net/projects/ardusim/">Ardusim</a> es un emulador gratuito de Arduino que corre dentro de <a href="http://www.codeblocks.org">codeblocks</a> (un entorno de desarrollo totalmente gratuito para C++ que descargarse e instalar para usarlo). Permite depurar nuestros programas y aunque no tiene una interface gráfica como alguno de los otros emuladores comerciales es bastante cómodo de usar y el mejor, a mi juicio de entre los gratuitos. <br><br>Para instalarlo es necesario descargar previamente el entorno donde se ejecuta llamado codeblocks, del que ya existen versiones compiladas y listas para usar de las plataformas más recientes en la <a target="_blank" href="http://www.codeblocks.org/downloads/binaries">página de descargas</a>. Una vez instalado el entorno hay que descargar el <a target="_blank" href="http://sourceforge.net/p/ardusim/code/44/tree/trunk/ardusim/">código de ArduSim</a>. Como no he visto una manera fácil de descargar sin tener que instalar nada más, copio aquí el <a href="http://ecampus.ugr.es/moodle/draftfile.php/900/user/draft/924132861/ardusim.zip">fichero para descargarlo</a>.<br><br>Para ejecutarlo en codeblocks, tenemos que abrir el fichero ardusim.cbp . Una vez abierto podemos modificar el código de Arduino para ejecutar en el fichero sketch.cpp en la carpeta sketch.<br><br>Un tutorial en <a href="http://www.youtube.com/watch?v=kj8OXhB5VpA">vídeo</a><br>
+    </td>
+  </tr>
+  <tr>
+    <td> <img width="150" vspace="0" hspace="10" border="0" align="left" title="simuino" alt="simuino" src="http://web.simuino.com/_/rsrc/1323708066305/home-1/Screenshot-6.png?height=299&amp;width=400">
+    </td>
+    <td><a href="http://www.Arduinodev.com/simuino/" target="_blank">Simuino</a> es un simulador gratuito que puede usarse en 2 versiones: en terminal (sin gráficos, únicamente con caracteres) y en versión web. Es necesario descargar el <a target="_blank" href="http://code.google.com/p/simuino/">código</a> y <a target="_blank" href="http://web.simuino.com/get-started">compilarlo</a>, lo cual es sencillo bajo linux.<br><br>
+    </td>
+  </tr> </tbody>
+</table>
