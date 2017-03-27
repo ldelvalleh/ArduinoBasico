@@ -1,6 +1,5 @@
-**Veamos una breve introducción a la programación, aplicada a Arduino
-pero que es común con muchos lenguajes en concreto C++\
-**
+Veamos una breve introducción a la programación, aplicada a Arduinopero que es común con muchos lenguajes en concreto C++\
+
 
 Comentarios {dir="ltr"}
 -----------
@@ -9,15 +8,16 @@ Un comentario es una línea que no influye en nuestro programa pero que
 nos sirve para documentar nuestro código. Es muy importante comentar
 nuestro código, puesto que nos ayudará a entender lo que estamos
 haciendo y si pensamos compartirlo con más gente, les facilitará
-enormemente la labor de comprender lo que pretendemos hacer.\
-\
-Existen 2 tipos de comentarios:\
-\
+enormemente la labor de comprender lo que pretendemos hacer.
+
+
+Existen 2 tipos de comentarios:
+
 
 -   El comentario de bloque, todo el contenido entre los símbolos /\* y
     \*/ será tomado como contenido del comentario
 
-\
+
 
 /\* Hola esto es un comentario tan largo y extenso que no cabe en
 
@@ -25,12 +25,12 @@ una sola línea.
 
 \*/
 
-\
+
 
 -   Línea de comentario: a par tir de las dos barras // se ignorará el
     contenido hasta la siguiente línea
 
-\
+
 
 // Este es un comentario de línea
 
@@ -51,48 +51,38 @@ Variables {dir="ltr"}
 
 Una variables es una forma de etiquetar y guardar un valor. El valor que
 contiene puede ser de diferentes tipos, como puede ser un número entero,
-un número decimal, o un carácter.\
+un número decimal, o un carácter.
+
 Las variables conservan su valor hasta que lo modificamos.Podemos
-modificar su valor y a partir de ese momento contendrá ese nuevo valor.\
+modificar su valor y a partir de ese momento contendrá ese nuevo valor.
+
 El tipo de la variable será definido cuando declaramos la variable por
 primera vez y a partir de ahí no se modificará. Definiremos la
 asignación como el momento en que le damos valor a la variable. Podemos
 declarar y asignar un valor en la misma sentencia. Veamos ejemplos de
-declaraciones y asignaciones:\
-\
+declaraciones y asignaciones:
 
-int a=10;
+    int a=10;
+    float c=10.2;
+    int b;
+    b=15;
 
-float c=10.2;
 
-int b;
-
-b=15;
-
-\
 Las variables tiene un ámbito (scope en inglés) que define la zona del
 código donde existen. Fuera de esta zona no podemos acceder a su valor.
-\
-\
 
-int a=10;
+    int a=10;
+    void prueba()  {
+        float b=10.2\*a;
+    }
 
-void prueba()
-
-{
-
-float b=10.2\*a;
-
-}
-
-\
 En este ejemplo la variable b sólo está definida dentro de la función
 prueba, es decir, no podremos usarla fuera de la misma. En cambio a, al
 estar definida fuera, también puede ser usada dentro.\
-\
+
 Más ejemplos en la [página de
 arduino](http://www.arduino.cc/en/Tutorial/Variables) y en muchas más
-páginas de internet.\
+páginas de internet.
 
 Tipos de variables {dir="ltr"}
 ------------------
@@ -100,15 +90,11 @@ Tipos de variables {dir="ltr"}
 Veamos algunos de los tipos de variables existentes. Cada tipo
 determinado, tiene un rango y una precisión:\
 
-byte: 8bits 0 a 255
-
-int: 16bits -32768 a 32767
-
-word: 16bits 0 a 65535
-
-long: 32bits -2x10\^6 a 2x10\^6
-
-float: guarda decimales -3.4x10\^34 a 3.4x10\^34
+    byte: 8bits 0 a 255
+    int: 16bits -32768 a 32767
+    word: 16bits 0 a 65535
+    long: 32bits -2x10\^6 a 2x10\^6
+    float: guarda decimales -3.4x10\^34 a 3.4x10\^34
 
 ¡¡¡Cuidado con los números negativos!!! ¡¡Cuidado con pasarnos!! {dir="ltr"}
 ----------------------------------------------------------------
@@ -116,7 +102,7 @@ float: guarda decimales -3.4x10\^34 a 3.4x10\^34
 Cuando una variable llega a su límite, tanto superior, como inferior se
 produce un desbordamiento y continua por el otro límite. Por ejemplo si
 tenemos una variable de tipo word con valor 0 y le restamos 1 ¡¡¡pasará
-a tener el valor 65535!!!\
+a tener el valor 65535!!!
 
 Operadores aritméticos {dir="ltr"}
 ----------------------
@@ -125,17 +111,17 @@ Representa la operación que se realizará entre los valores de la
 expresión\
 \
 
-+, -, \*, /, % (módulo, el resto de la división entre los valores)
+    +, -, \*, /, % (módulo, el resto de la división entre los valores)
 
-\
+
 Ejemplos:\
 \
 
-a=a+3;
+    a=a+3;
 
-b=a/3;
+    b=a/3;
 
-c=b%3;
+    c=b%3;
 
 Operadores {dir="ltr"}
 ----------
@@ -168,11 +154,9 @@ del operador [], indicando la posición. Empiezan en la posición 0 y la
 última será la que indica su longitud menos 1.\
 \
 
-int miArray[5]; //Declaramos un array de 5 elementos enteros
-
-int miOtroArray[]={1,23,2}; // Declaramos un array de 3 elementos con
-
-// los elementos asignados
+    int miArray[5]; //Declaramos un array de 5 elementos enteros
+    int miOtroArray[]={1,23,2}; // Declaramos un array de 3 elementos con
+    // los elementos asignados
 
 Constantes {dir="ltr"}
 ----------
@@ -181,11 +165,9 @@ Son variables a las que no podemos modificar al valor. Algunos
 ejemplos:\
 \
 
-true/false
-
-HIGH/LOW
-
-INPUT/OUTPUT
+    true/false
+    HIGH/LOW
+    INPUT/OUTPUT
 
 \
 Conviene usarlas para evitar confusiones.\
@@ -218,7 +200,7 @@ sin más que incluirlas en nuestro código. En el ejemplo se incluye la
 librería serie que se usa para comunicar el pc con arduino.\
 \
 
-\#include \<serial.h\>
+    #include \<serial.h\>
 
 \
 Existen muchas librerías cuyo uso iremos viendo a lo largo del curso\
@@ -238,21 +220,12 @@ Sentencias condicionales {dir="ltr"}
 Ejecutaremos un código si se cumple la condición y otro distinto si no
 se cumple\
 
-if (condición)
-
-{
-
-// código si se cumple
-
-}
-
-else
-
-{
-
-// código si no se cumple
-
-}
+    if (condición){
+    // código si se cumple
+    }
+    else{
+    // código si no se cumple
+    }
 
 \
 
@@ -260,21 +233,12 @@ else
 Ejemplo\
 \
 
-if ((pin4Entrada \< 500) && (pin4Entrada\>100))
-
-{
-
-// código A
-
-}
-
-else
-
-{
-
-// código B
-
-}
+    if ((pin4Entrada \< 500) && (pin4Entrada\>100)){
+        // código A
+    }
+    else{
+    // código B
+    }
 
 \
 
@@ -282,27 +246,17 @@ else
 
 Dependiendo del valor de una variable ejecutaremos un código distinto\
 
-switch (var) {
-
-case 1:
-
-//hacemos algo si var es 1
-
-break;
-
-case 2:
-
-//hacemos algo si var es 2
-
-break;
-
-default:
-
-// si nada concuerda, default
-
-// default es opcional
-
-}
+    switch (var) {
+        case 1:
+            //hacemos algo si var es 1
+            break;
+        case 2:
+            //hacemos algo si var es 2
+            break;
+        default:
+            // si nada concuerda, default
+            // default es opcional
+        }
 
 Bucles {dir="ltr"}
 ------
@@ -318,33 +272,27 @@ Es el más natural para usar cuando la iteración tiene un número claro de
 repeticiones:\
 \
 
-for (inicializacion; condicion; incremento) {
-
-//sentencia(s);
-
-}
+    for (inicializacion; condicion; incremento) {
+        //sentencia(s);
+    }
 
 \
 por ejemplo\
 \
 
-for (int i=0;i\<20;i=i+1) {
-
-//sentencia(s);
-
-}
+    for (int i=0;i\<20;i=i+1) {
+        //sentencia(s);
+    }
 
 que se realizará 20 veces\
-\
-Bucle while\
+
+### Bucle while
 El bucle while ejecutará las sentencias de su bloque mientras que la
 condición inicial se cumpla\
 
-while(expresion){
-
-// sentencia(s);
-
-}
+    while(expresion){
+        // sentencia(s);
+    }
 
 Si la condición no se cumple inicialmente no se realizará ninguna
 iteración.\
@@ -354,15 +302,11 @@ iteración.\
 En este bucle la comprobación se hace después de la iteración, por lo
 que tenemos garantizado que al menos se ejecutará una vez la iteración\
 
-do
+    do    {
+    //sentencia(s)
+    } while (condicion);
 
-{
 
-//sentencia(s)
-
-} while (condicion);
-
-\
 
 ### Saliendo de los bucles {dir="ltr"}
 
@@ -381,19 +325,12 @@ label
 
 \
 
-for(int i=0;i\<10;i++)
-
-{
-
-if (bsalto\>0)
-
-continue; // Se salta el código del resto de la iteración
-
-else
-
-break; //sale del bucle
-
-}
+    for(int i=0;i\<10;i++){
+        if (bsalto\>0)
+            continue; // Se salta el código del resto de la iteración
+        else
+            break; //sale del bucle
+    }
 
 \
 
@@ -453,25 +390,24 @@ Muchas veces es necesario convertir valores de variables de tipos
 diferentes. Para eso existen en arduino un conjunto de funciones que nos
 permiten hacer estas transformaciones con garantías:\
 
-char() // Convierte a un carácterer
+    char() // Convierte a un carácterer
 
-byte() // Convierte a un byte
+    byte() // Convierte a un byte
 
-int() // Convierte a un int
+    int() // Convierte a un int
 
-word() // Convierte a un word
+    word() // Convierte a un word
 
-long() // Convierte a un long
+    long() // Convierte a un long
 
-float() // Convierte a un número decimal
+    float() // Convierte a un número decimal
 
 \
 Por ejemplo, veamos como convierte a entero. Obviamente perdemos la
 parte decimal.\
 
-float a=2.4;
-
-int b=int(a);
+    float a=2.4;
+    int b=int(a);
 
 \
 
