@@ -14,13 +14,13 @@ enormemente la labor de comprender lo que pretendemos hacer.
 Existen 2 tipos de comentarios:
 
 
--   El comentario de bloque, todo el contenido entre los símbolos /\* y
-    \*/ será tomado como contenido del comentario
+-   El comentario de bloque, todo el contenido entre los símbolos /* y
+    */ será tomado como contenido del comentario
 
 
 
-    /* Hola esto es un comentario tan largo y extenso que no cabe en
-    una sola línea.*/
+        /* Hola esto es un comentario tan largo y extenso que no cabe en
+        una sola línea.*/
 
 
 
@@ -29,7 +29,7 @@ Existen 2 tipos de comentarios:
 
 
 
-// Este es un comentario de línea
+        // Este es un comentario de línea
 
 Bloques {dir="ltr"}
 -------
@@ -37,7 +37,7 @@ Bloques {dir="ltr"}
 Un bloque es un conjunto de líneas de código que se encuentran
 encerradas entre dos llaves\
 
-{ … }
+        { … }
 
 Más adelante veremos que determinadas sentencias de control incluyen
 bloques de instrucciones, como por ejemplo las instrucciones de control
@@ -70,7 +70,7 @@ código donde existen. Fuera de esta zona no podemos acceder a su valor.
 
     int a=10;
     void prueba()  {
-        float b=10.2\*a;
+        float b=10.2*a;
     }
 
 En este ejemplo la variable b sólo está definida dentro de la función
@@ -105,14 +105,14 @@ Operadores aritméticos {dir="ltr"}
 ----------------------
 
 Representa la operación que se realizará entre los valores de la
-expresión\
-\
+expresión:
+
 
     +, -, \*, /, % (módulo, el resto de la división entre los valores)
 
 
-Ejemplos:\
-\
+Ejemplos:
+
 
     a=a+3;
 
@@ -123,7 +123,6 @@ Ejemplos:\
 Operadores {dir="ltr"}
 ----------
 
-\
 
 -   Operadores Booleanos: && (AND / Y), || (OR / O ), !(NOT / NO)
     Representan las operaciones lógicas que podemos aplicar a las
@@ -134,9 +133,6 @@ Operadores {dir="ltr"}
     bits individuales de las variables representadas en [lenguaje
     binario](http://es.wikipedia.org/wiki/Binario)
 -   Operadores compuestos:
-
-\
-
 -   Incremento/decremento de variables: ++, -- Incrementan/decrementan
     el valor de la variable
 -   Asignación y operación: +=, -=, \*=, /=, &=, |= Realizan la
@@ -148,8 +144,8 @@ Array {dir="ltr"}
 Un array es una agrupación de variables con un tipo y un tamaño
 determinados. Podemos acceder a cada elemento individualmente por medio
 del operador [], indicando la posición. Empiezan en la posición 0 y la
-última será la que indica su longitud menos 1.\
-\
+última será la que indica su longitud menos 1.
+
 
     int miArray[5]; //Declaramos un array de 5 elementos enteros
     int miOtroArray[]={1,23,2}; // Declaramos un array de 3 elementos con
@@ -159,15 +155,13 @@ Constantes {dir="ltr"}
 ----------
 
 Son variables a las que no podemos modificar al valor. Algunos
-ejemplos:\
-\
+ejemplos:
 
     true/false
     HIGH/LOW
     INPUT/OUTPUT
 
-\
-Conviene usarlas para evitar confusiones.\
+Conviene usarlas para evitar confusiones.
 
 Funciones {dir="ltr"}
 ---------
