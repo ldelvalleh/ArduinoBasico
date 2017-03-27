@@ -1,7 +1,7 @@
 Veamos una breve introducción a la programación, aplicada a Arduinopero que es común con muchos lenguajes en concreto C++\
 
 
-Comentarios {dir="ltr"}
+Comentarios
 -----------
 
 Un comentario es una línea que no influye en nuestro programa pero que
@@ -31,7 +31,7 @@ Existen 2 tipos de comentarios:
 
         // Este es un comentario de línea
 
-Bloques {dir="ltr"}
+Bloques
 -------
 
 Un bloque es un conjunto de líneas de código que se encuentran
@@ -43,7 +43,7 @@ Más adelante veremos que determinadas sentencias de control incluyen
 bloques de instrucciones, como por ejemplo las instrucciones de control
 o las de decisión\
 
-Variables {dir="ltr"}
+Variables 
 ---------
 
 Una variables es una forma de etiquetar y guardar un valor. El valor que
@@ -81,7 +81,7 @@ Más ejemplos en la [página de
 arduino](http://www.arduino.cc/en/Tutorial/Variables) y en muchas más
 páginas de internet.
 
-Tipos de variables {dir="ltr"}
+Tipos de variables
 ------------------
 
 Veamos algunos de los tipos de variables existentes. Cada tipo
@@ -93,7 +93,7 @@ determinado, tiene un rango y una precisión:\
     long: 32bits -2x10\^6 a 2x10\^6
     float: guarda decimales -3.4x10\^34 a 3.4x10\^34
 
-¡¡¡Cuidado con los números negativos!!! ¡¡Cuidado con pasarnos!! {dir="ltr"}
+¡¡¡Cuidado con los números negativos!!! ¡¡Cuidado con pasarnos!! 
 ----------------------------------------------------------------
 
 Cuando una variable llega a su límite, tanto superior, como inferior se
@@ -101,7 +101,7 @@ produce un desbordamiento y continua por el otro límite. Por ejemplo si
 tenemos una variable de tipo word con valor 0 y le restamos 1 ¡¡¡pasará
 a tener el valor 65535!!!
 
-Operadores aritméticos {dir="ltr"}
+Operadores aritméticos 
 ----------------------
 
 Representa la operación que se realizará entre los valores de la
@@ -120,7 +120,7 @@ Ejemplos:
 
     c=b%3;
 
-Operadores {dir="ltr"}
+Operadores 
 ----------
 
 
@@ -151,7 +151,7 @@ del operador [], indicando la posición. Empiezan en la posición 0 y la
     int miOtroArray[]={1,23,2}; // Declaramos un array de 3 elementos con
     // los elementos asignados
 
-Constantes {dir="ltr"}
+Constantes
 ----------
 
 Son variables a las que no podemos modificar al valor. Algunos
@@ -163,12 +163,12 @@ ejemplos:
 
 Conviene usarlas para evitar confusiones.
 
-Funciones {dir="ltr"}
+Funciones
 ---------
 
 Una función es un conjunto de instrucciones agrupadas para un nombre, al
-que le pasaremos unos argumentos y devolverá un valor.\
-\
+que le pasaremos unos argumentos y devolverá un valor.
+
 ¿Por qué usamos funciones?\
 
 -   Cuando repetimos un fragmento de código
