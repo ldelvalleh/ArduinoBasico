@@ -19,11 +19,8 @@ Existen 2 tipos de comentarios:
 
 
 
-/\* Hola esto es un comentario tan largo y extenso que no cabe en
-
-una sola línea.
-
-\*/
+    /* Hola esto es un comentario tan largo y extenso que no cabe en
+    una sola línea.*/
 
 
 
