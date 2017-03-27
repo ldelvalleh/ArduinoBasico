@@ -54,7 +54,7 @@ Las variables tiene un ámbito (scope en inglés) que define la zona del código
 
 En este ejemplo la variable _b_ sólo está definida dentro de la función prueba, es decir, no podremos usarla fuera de la misma. En cambio _a_, al estar definida fuera, también puede ser usada dentro.
 
-Puedes encontrar más ejemplos en la [página de Arduino](http://www.arduino.cc/en/Tutorial/Variables).
+Puedes encontrar más ejemplos en la [página de Arduino](http://www.Arduino.cc/en/Tutorial/Variables).
 
 Tipos de variables
 ------------------
@@ -136,7 +136,7 @@ El formato siempre es:
 Librerías
 ---------
 
-Cuando vamos a reutilizar varias veces un código puede ser buena idea que creemos una librería, que no es más que una colección de código que empaquetamos de una manera concreta y cuyas funciones podemos utilizar sin más que incluirlas en nuestro código. En el ejemplo se incluye la librería serie que se usa para comunicar el pc con arduino.
+Cuando vamos a reutilizar varias veces un código puede ser buena idea que creemos una librería, que no es más que una colección de código que empaquetamos de una manera concreta y cuyas funciones podemos utilizar sin más que incluirlas en nuestro código. En el ejemplo se incluye la librería serie que se usa para comunicar el pc con Arduino.
 
 
     #include <Serial.h>
@@ -165,7 +165,7 @@ Ejecutaremos un código si se cumple la condición y otro distinto si no se cump
 
 Ejemplo
 
-    if ((pin4Entrada \< 500) && (pin4Entrada\>100)){
+    if ((valorEntrada < 500) && (valorEntrada>100)){
         // código A
     }
     else{
@@ -205,54 +205,46 @@ ticiones:
         //sentencia(s);
     }
 
-\
+
 por ejemplo\
-\
+
 
     for (int i=0;i\<20;i=i+1) {
         //sentencia(s);
     }
 
-que se realizará 20 veces\
+que se realizará 20 veces
 
 ### Bucle while
-El bucle while ejecutará las sentencias de su bloque mientras que la
-condición inicial se cumpla\
+
+El bucle while ejecutará las sentencias de su bloque mientras que la condición inicial se cumpla
 
     while(expresion){
         // sentencia(s);
     }
 
-Si la condición no se cumple inicialmente no se realizará ninguna
-iteración.\
+Si la condición no se cumple inicialmente no se realizará ninguna iteración.
 
 ### Bucle do
 
-En este bucle la comprobación se hace después de la iteración, por lo
-que tenemos garantizado que al menos se ejecutará una vez la iteración\
+En este bucle la comprobación se hace después de la iteración, por lo que tenemos garantizado que al menos se ejecutará una vez la iteración
 
     do    {
     //sentencia(s)
     } while (condicion);
 
+### ¿Como salir de los bucles?
 
+De un bucle saldremos cuando no se verifique la condición, pero también podemos formar la salida usando las siguientes instrucciones
 
-### Saliendo de los bucles
+* [break](http://Arduino.cc/en/Reference/Break) // sale del bucle
 
-De un bucle saldremos cuando no se verifique la condición, pero también
-podemos formar la salida usando las siguientes instrucciones\
+* [continue](http://Arduino.cc/en/Reference/Continue) // salta el paso actual del bucle
 
-•[break](http://arduino.cc/en/Reference/Break) // sale del bucle
+* [return](http://Arduino.cc/en/Reference/Return) // sale de la función
 
-•[continue](http://arduino.cc/en/Reference/Continue) // salta el paso
-actual del bucle
+* [goto](http://Arduino.cc/en/Reference/Goto) label //salta a la etiqueta *label*
 
-•[return](http://arduino.cc/en/Reference/Return) // sale de la función
-
-•[goto](http://arduino.cc/en/Reference/Goto) label //salta a la etiqueta
-label
-
-\
 
     for(int i=0;i\<10;i++){
         if (bsalto\>0)
@@ -261,161 +253,117 @@ label
             break; //sale del bucle
     }
 
-\
 
 String: o cadenas de caracteres
 -------------------------------
 
-Para facilitar el trabajo con cadenas de caracteres, existe la case
-[String](http://arduino.cc/en/Reference/StringObject). Tiene los
-siguientes métodos\
-\
+Para facilitar el trabajo con cadenas de caracteres, existe la clase [String](http://Arduino.cc/en/Reference/StringObject). Tiene (entre otros muchos) los siguientes métodos:
 
-•[compareTo](http://arduino.cc/en/Reference/StringCompareTo)() //compara
-dos cadenas
+* [compareTo](http://Arduino.cc/en/Reference/StringCompareTo)() //compara dos cadenas
 
-•[concat](http://arduino.cc/en/Reference/StringConcat)() // concatena
+* [concat](http://Arduino.cc/en/Reference/StringConcat)() // concatena
 
-•[endsWith](http://arduino.cc/en/Reference/StringEndsWith)() //
-comprueba si termina por...
+* [endsWith](http://Arduino.cc/en/Reference/StringEndsWith)() // comprueba si termina por...
 
-•[equals](http://arduino.cc/en/Reference/StringEquals)() //comprueba si
-son iguales
+* [equals](http://Arduino.cc/en/Reference/StringEquals)() //comprueba si son iguales
 
-•[equalsIgnoreCase](http://arduino.cc/en/Reference/StringEqualsIgnoreCase)()
-//comprueba igualdad ignorando mayúsculas y minúsculas
+* [equalsIgnoreCase](http://Arduino.cc/en/Reference/StringEqualsIgnoreCase)() // comprueba igualdad ignorando mayúsculas y minúsculas
 
-•[indexOf](http://arduino.cc/en/Reference/StringIndexOf)() // devuelve
-la primera posición del carácter que le pasamos
+* [indexOf](http://Arduino.cc/en/Reference/StringIndexOf)() // devuelve la primera posición del carácter que le pasamos
 
-•[lastIndexOf](http://arduino.cc/en/Reference/StringLastIndexOf)() //
-devuelve la última posición del carácter que le pasamos
+* [lastIndexOf](http://Arduino.cc/en/Reference/StringLastIndexOf)() // devuelve la última posición del carácter que le pasamos
 
-•[length](http://arduino.cc/en/Reference/StringLength)() //longitud de
-la cadena
+* [length](http://Arduino.cc/en/Reference/StringLength)() // longitud de la cadena
 
-•[replace](http://arduino.cc/en/Reference/StringReplace)() //reemplaza
+* [replace](http://Arduino.cc/en/Reference/StringReplace)() // reemplaza
 
-•[startsWith](http://arduino.cc/en/Reference/StringStartsWith)()
-//comprueba si empieza por
+* [startsWith](http://Arduino.cc/en/Reference/StringStartsWith)() // comprueba si empieza por
 
-•[substring](http://arduino.cc/en/Reference/StringSubstring)() //
-devuelve un fragmento de la cadena original
+* [substring](http://Arduino.cc/en/Reference/StringSubstring)() // devuelve un fragmento de la cadena original
 
-•[toLowerCase](http://arduino.cc/en/Reference/StringToLowerCase)()
-//convierte a minúsculas\
-•[toUpperCase](http://arduino.cc/en/Reference/StringToUpperCase)()
-//convierte a mayúsculas
+* [toLowerCase](http://Arduino.cc/en/Reference/StringToLowerCase)() // convierte a minúsculas
 
-•[trim](http://arduino.cc/en/Reference/StringTrim)() //elimina los
-espacios iniciales y finales
+* [toUpperCase](http://Arduino.cc/en/Reference/StringToUpperCase)() // convierte a mayúsculas
 
-\
+* [trim](http://Arduino.cc/en/Reference/StringTrim)() // elimina los espacios iniciales y finales
+
+
 
 Conversiones de tipos
 ---------------------
 
-Muchas veces es necesario convertir valores de variables de tipos
-diferentes. Para eso existen en arduino un conjunto de funciones que nos
-permiten hacer estas transformaciones con garantías:\
+Muchas veces es necesario convertir valores de variables de tipos diferentes. Para eso existen en Arduino un conjunto de funciones que nos permiten hacer estas transformaciones con garantías:
 
     char() // Convierte a un carácterer
-
     byte() // Convierte a un byte
-
     int() // Convierte a un int
-
     word() // Convierte a un word
-
     long() // Convierte a un long
-
     float() // Convierte a un número decimal
 
-\
-Por ejemplo, veamos como convierte a entero. Obviamente perdemos la
-parte decimal.\
+
+Por ejemplo, veamos como convierte a entero. Obviamente perdemos la parte decimal.
 
     float a=2.4;
     int b=int(a);
 
-\
 
 Funciones matemáticas
 ---------------------
 
-Aunque el procesador de arduino no excesivamente potente en lo que a
-cálculo matemático se refiere, existen librerías que nos permiten hacer
-la mayoría de las funciones matemáticas usuales:\
+Aunque el procesador de Arduino no excesivamente potente en lo que a cálculo matemático se refiere, existen librerías que nos permiten hacer la mayoría de las funciones matemáticas usuales:\
 
 ### Matemáticas
 
-•[min](http://arduino.cc/en/Reference/Min)(a,b) // mínimo de a y b
+* [min](http://Arduino.cc/en/Reference/Min)(a,b) // mínimo de a y b
 
-•[max](http://arduino.cc/en/Reference/Max)(a,b) // máximo de a y b
+* [max](http://Arduino.cc/en/Reference/Max)(a,b) // máximo de a y b
 
-•[abs](http://arduino.cc/en/Reference/Abs)(a) // valor absoluto d ea
+* [abs](http://Arduino.cc/en/Reference/Abs)(a) // valor absoluto de a
 
-•[pow](http://arduino.cc/en/Reference/Pow)(a,b) // devuelve a\^b
+* [pow](http://Arduino.cc/en/Reference/Pow)(a,b) // devuelve a elevado a b
 
-•[sqrt](http://arduino.cc/en/Reference/Sqrt)(a) // devuelve la raiz
-cuadrada de a
+* [sqrt](http://Arduino.cc/en/Reference/Sqrt)(a) // devuelve la raiz cuadrada de a
 
 ### Trigonometría
 
-•[sin](http://arduino.cc/en/Reference/Sin)(a) // calcula el seno de a
+* [sin](http://Arduino.cc/en/Reference/Sin)(a) // calcula el seno de a
 
-•[cos](http://arduino.cc/en/Reference/Cos)(a) // calcula el coseno de a
+* [cos](http://Arduino.cc/en/Reference/Cos)(a) // calcula el coseno de a
 
-•[tan](http://arduino.cc/en/Reference/Tan)(a) // calcula la tangente de
-a
+* [tan](http://Arduino.cc/en/Reference/Tan)(a) // calcula la tangente de a
 
 ### Números aleatorios
 
-•[randomSeed](http://arduino.cc/en/Reference/RandomSeed)(a) //
-inicializa los número aleatorios con a
+* [randomSeed](http://Arduino.cc/en/Reference/RandomSeed)(a) // inicializa los número aleatorios con a
 
-•[random](http://arduino.cc/en/Reference/Random)() // devuelve un número
-aleatorio
+* [random](http://Arduino.cc/en/Reference/Random)() // devuelve un número aleatorio
 
-\
-Obviamente, dada la poca capacidad de cálculo de arduino, el usar estas
-funciones matemáticas complejas es muy costoso computacionalmente, por
-lo que se debería de evitar u optimizar su uso.\
+Obviamente, dada la poca capacidad de cálculo de Arduino, el usar estas funciones matemáticas complejas es muy costoso computacionalmente, por lo que se debería de evitar u optimizar su uso.
 
 Introducción a la programación de objetos
 -----------------------------------------
 
-Un objeto es un conjunto de funciones (métodos) y variables (atributos)
-que trataremos de una \
-forma global.\
-\
-El trabajar con objetos nos permite encapsular (esconder las
-interioridades), mostrando un interface (una vista) con lo que
-permitimos que otros vean (atributos públicos) y usen (métodos públicos)
-de nosotros.\
-\
-A los que los usamos nos facilitan el trabajo al agrupar las
-funcionalidades.\
-Por ejemplo el objeto Serial, permite trabajar con todo lo relacionado
-con el manejo de los puertos serie:\
+Un objeto es un conjunto de funciones (métodos) y variables (atributos) que trataremos de una forma global.
+
+El trabajar con objetos nos permite encapsular (esconder las interioridades), mostrando un interface (una vista) con lo que permitimos que otros vean (atributos públicos) y usen (métodos públicos) de nosotros.
+
+A los que los usamos nos facilitan el trabajo al agrupar las funcionalidades.
+
+Por ejemplo el objeto Serial, permite trabajar con todo lo relacionado con el manejo de los puertos serie:
 
 -   Serial.print enviará por el puerto serie
 -   Serial.read leerá por el puerto serie
 -   Serial.write escribirá...
 
-\
-La mayoría de las librerías de arduino están formadas por objetos.\
+La mayoría de las librerías de Arduino están formadas por objetos.
 
 ¿Donde encontrar más información?
 ---------------------------------
 
-\
-
--   [arduino](http://arduino.cc/)
--   [arduino programing notebook
-    (inglés)](http://arduino.cc/playground/uploads/Main/arduino_notebook_v1-1.pdf)
--   [Guía de programación de arduino
+-   [Arduino](http://Arduino.cc/)
+-   [Arduino programing notebook
+    (inglés)](http://Arduino.cc/playground/uploads/Main/Arduino_notebook_v1-1.pdf)
+-   [Guía de programación de Arduino
     (español)](http://books.openlibra.com/pdf/Manual-Programacion-Arduino.pdf)
 -   [freeduino](http://www.freeduino.org/)
-
-\
