@@ -1,4 +1,4 @@
-Introducción a la progrmación en C++
+Apéndice: Introducción a la programación en C++
 ------------------------------------
 
 Veamos una breve introducción a la programación, aplicada a Arduino pero que es común con muchos lenguajes en concreto C++
@@ -103,7 +103,7 @@ Un array es una agrupación de variables con un tipo y un tamaño determinados. 
 
 
     int miArray[5]; //Declaramos un array de 5 elementos enteros
-    int miOtroArray[]={1,23,2}; // Declaramos un array de 3 elementos con los elementos asignados
+    int miOtroArray[]={1,23,2}; // Declaramos un array de 3 elementos con sus valores asignados
 
 Constantes
 ----------
@@ -152,6 +152,8 @@ Son aquellas estructuras que nos permiten modificar el flujo de ejecución de nu
 Sentencias condicionales
 ------------------------
 
+Permiten decidir si se ejecutan o no, unas sentencias en fnción de que se cumplan determinadas condiciones
+
 ### Sentencia if
 
 Ejecutaremos un código si se cumple la condición y otro distinto si no se cumple
@@ -197,8 +199,7 @@ Existen 3 tipos de bucles:
 
 ### Bucle for
 
-Es el más natural para usar cuando la iteración tiene un número claro de repe
-ticiones:
+Es el más natural para usar cuando la iteración tiene un número claro de repeticiones:
 
 
     for (inicializacion; condicion; incremento) {
@@ -206,7 +207,7 @@ ticiones:
     }
 
 
-por ejemplo\
+por ejemplo
 
 
     for (int i=0;i\<20;i=i+1) {
@@ -246,12 +247,13 @@ De un bucle saldremos cuando no se verifique la condición, pero también podemo
 * [goto](http://Arduino.cc/en/Reference/Goto) label //salta a la etiqueta *label*
 
 
-    for(int i=0;i\<10;i++){
-        if (bsalto\>0)
-            continue; // Se salta el código del resto de la iteración
-        else
-            break; //sale del bucle
-    }
+
+        for(int i=0;i\<10;i++){
+            if (bsalto\>0)
+                continue; // Se salta el código del resto de la iteración
+            else
+                break; //sale del bucle
+        }
 
 
 String: o cadenas de caracteres
@@ -366,4 +368,4 @@ La mayoría de las librerías de Arduino están formadas por objetos.
     (inglés)](http://Arduino.cc/playground/uploads/Main/Arduino_notebook_v1-1.pdf)
 -   [Guía de programación de Arduino
     (español)](http://books.openlibra.com/pdf/Manual-Programacion-Arduino.pdf)
--   [freeduino](http://www.freeduino.org/)
+-   [Freeduino page](http://www.freeduino.org/)
