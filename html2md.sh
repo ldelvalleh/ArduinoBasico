@@ -19,6 +19,4 @@ git commit -m "mv" "html/$ORIGIN_FILE"
 git add "$DEST_FILE"
 git commit -m "v0" "$DEST_FILE"
 git commit -m "v0" "html/$ORIGIN_FILE"
-subl "$DEST_FILE"
-
-
+atom "$DEST_FILE"
