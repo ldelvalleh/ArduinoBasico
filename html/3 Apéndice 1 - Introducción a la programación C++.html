@@ -1,178 +1,663 @@
-<b id="internal-source-marker_0.9872265073936433" style="color: rgb(0, 0, 0);"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Veamos una breve introducción a la programación, aplicada a Arduino pero que es común con muchos lenguajes en concreto C++</span><br>
-<h2 dir="ltr"><span style="font-size: 19px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Comentarios</span></h2><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Un comentario es una línea que no influye en nuestro programa pero que nos sirve para documentar nuestro código. Es muy importante comentar nuestro código, puesto que nos ayudará a entender lo que estamos haciendo y si pensamos compartirlo con más gente, les facilitará enormemente la labor de comprender lo que pretendemos hacer.</span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Existen 2 tipos de comentarios:</span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br>
-<ul style="margin-top: 0pt; margin-bottom: 0pt;">
-  <li style="list-style-type: disc; font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">El comentario de bloque, todo el contenido entre los símbolos /* y */ será tomado como contenido del comentario</span></li>
-</ul><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">/* Hola esto es un comentario tan largo y extenso que no cabe en </span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">una sola línea. </span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">*/</span></p><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br>
-<ul style="margin-top: 0pt; margin-bottom: 0pt;">
-  <li style="list-style-type: disc; font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Línea de comentario: a par tir de las dos barras // se ignorará el contenido hasta la siguiente línea</span></li>
-</ul><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br>
-<p dir="ltr" style="text-indent: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">// Este es un comentario de línea</span></p>
-<h2 dir="ltr"><span style="font-size: 19px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Bloques</span></h2><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Un bloque es un conjunto de líneas de código que se encuentran encerradas entre dos llaves</span><br>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">{ … }</span></p><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Más adelante veremos que determinadas sentencias de control incluyen bloques de instrucciones, como por ejemplo las instrucciones de control o las de decisión</span><br>
-<h2 dir="ltr"><span style="font-size: 19px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Variables</span></h2><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Una variables es una forma de etiquetar y guardar un valor. El valor que contiene puede ser de diferentes tipos, como puede ser un número entero, un número decimal, o un carácter.</span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Las variables conservan su valor hasta que lo modificamos.Podemos modificar su valor y a partir de ese momento contendrá ese nuevo valor.</span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">El tipo de la variable será definido cuando </span><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">declaramos </span><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">la variable por primera vez y a partir de ahí no se modificará. Definiremos la </span><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">asignación </span><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">como el momento en que le damos valor a la variable. Podemos declarar y asignar un valor en la misma sentencia. Veamos ejemplos de declaraciones y asignaciones:</span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">int a=10;</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">float c=10.2;</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">int b;</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">b=15;</span></p><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Las variables tiene un </span><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">ámbito </span><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(scope en inglés) que define la zona del código donde existen. Fuera de esta zona no podemos acceder a su valor. </span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">int a=10;</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">void prueba()</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">{</span></p>
-<p dir="ltr" style="margin-left: 36pt; text-indent: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">float b=10.2*a;</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">}</span><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span></p><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">En este ejemplo la variable </span><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">b</span><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> sólo está definida dentro de la función </span><span style="font-size: 16px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">prueba</span><span style="font-size: 16px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">, es decir, no podremos usarla fuera de la misma. En cambio a, al estar definida fuera, también puede ser usada dentro.</span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Más ejemplos en la </span><a href="http://www.arduino.cc/en/Tutorial/Variables"><span style="font-size: 15px; font-family: arial; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">página de arduino</span></a><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> y en muchas más páginas de internet.</span><br>
-<h2 dir="ltr"><span style="font-size: 19px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Tipos de variables</span></h2><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Veamos algunos de los tipos de variables existentes. Cada tipo determinado, tiene un rango y una precisión:</span><br>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">byte: 8bits 0 a 255</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">int: 16bits -32768 a 32767</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">word: 16bits 0 a 65535</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">long: 32bits -2x10^6 a 2x10^6</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">float: guarda decimales -3.4x10^34 a 3.4x10^34</span></p>
-<h2 dir="ltr"><span style="font-size: 19px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">¡¡¡Cuidado con los números negativos!!! ¡¡Cuidado con pasarnos!!</span></h2><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Cuando una variable llega a su límite, tanto superior, como inferior se produce un desbordamiento y continua por el otro límite. Por ejemplo si tenemos una variable de tipo word con valor 0 y le restamos 1 ¡¡¡pasará a tener el valor 65535!!!</span><br>
-<h2 dir="ltr"><span style="font-size: 19px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Operadores aritméticos</span></h2><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Representa la operación que se realizará entre los valores de la expresión</span><br><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br>
-<p dir="ltr" style="text-indent: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">+, -, *, /, % (módulo, el resto de la división entre los valores)</span></p><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Ejemplos:</span><br><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">a=a+3;</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">b=a/3;</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">c=b%3;</span></p>
-<h2 dir="ltr"><span style="font-size: 19px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Operadores</span></h2><br>
-<ul style="margin-top: 0pt; margin-bottom: 0pt;">
-  <li style="list-style-type: disc; font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Operadores Booleanos: &amp;&amp; (AND / Y), || (OR / O ), !(NOT / NO) Representan las operaciones lógicas que podemos aplicar a las condiciones</span></li>
-  <li style="list-style-type: disc; font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Operadores de acceso a punteros: *, &amp; Los usaremos para acceder a memoria</span></li>
-  <li style="list-style-type: disc; font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Operadores de bits: &amp;, |, ^, ~, &lt;&lt;, &gt;&gt; Permiten manipular los bits individuales de las variables representadas en </span><a href="http://es.wikipedia.org/wiki/Binario"><span style="font-size: 15px; font-family: arial; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">lenguaje binario</span></a><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span></li>
-  <li style="list-style-type: disc; font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Operadores compuestos:</span></li>
-</ul><br>
-<ul style="margin-top: 0pt; margin-bottom: 0pt;">
-  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
-    <li style="list-style-type: circle; font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Incremento/decremento de variables: ++, -- Incrementan/decrementan el valor de la variable</span></li>
-    <li style="list-style-type: circle; font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Asignación y operación: +=, -=, *=, /=, &amp;=, |= Realizan la operación indicada y luego la asignación del resultado a la variable</span></li>
-  </ul>
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>3 Apéndice 1 - Introducción a la programación C++.html</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(171, 178, 191); overflow: auto; background-color: rgb(40, 44, 52); }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(124, 135, 156); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 139, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(124, 135, 156); border-color: rgb(75, 83, 98); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(75, 83, 98); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(75, 83, 98); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(58, 63, 75); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(49, 54, 63); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81); background-color: rgb(58, 63, 75); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); overflow: scroll; background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; border: 0px none; background-color: rgb(231, 231, 231); }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { border-top: 1px solid rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; border-radius: 3px; background-color: rgba(0, 0, 0, 0.0392157); }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; border: 0px; background: transparent; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; border-radius: 3px; background-color: rgb(247, 247, 247); }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; border: 0px; background-color: transparent; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; background-color: rgb(252, 252, 252); }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
+.markdown-preview .task-list-item-checkbox { position: absolute; margin: 0.25em 0px 0px -1.4em; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors {
+  background-color: #282c34;
+  color: #abb2bf;
+}
+pre.editor-colors .line.cursor-line {
+  background-color: rgba(153, 187, 255, 0.04);
+}
+pre.editor-colors .invisible {
+  color: #abb2bf;
+}
+pre.editor-colors .cursor {
+  border-left: 2px solid #528bff;
+}
+pre.editor-colors .selection .region {
+  background-color: #3e4451;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #528bff;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .indent-guide {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .wrap-guide {
+  background-color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .find-result .region.region.region,
+pre.editor-colors .current-result .region.region.region {
+  border-radius: 2px;
+  background-color: rgba(82, 139, 255, 0.24);
+  transition: border-color 0.4s;
+}
+pre.editor-colors .find-result .region.region.region {
+  border: 2px solid transparent;
+}
+pre.editor-colors .current-result .region.region.region {
+  border: 2px solid #528bff;
+  transition-duration: .1s;
+}
+pre.editor-colors .gutter .line-number {
+  color: #636d83;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  color: #abb2bf;
+  background-color: #2c313a;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right {
+  color: #abb2bf;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #abb2bf;
+}
+.syntax--comment {
+  color: #5c6370;
+  font-style: italic;
+}
+.syntax--comment .syntax--markup.syntax--link {
+  color: #5c6370;
+}
+.syntax--entity.syntax--name.syntax--type {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #98c379;
+}
+.syntax--keyword {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--control {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--operator {
+  color: #abb2bf;
+}
+.syntax--keyword.syntax--other.syntax--special-method {
+  color: #61afef;
+}
+.syntax--keyword.syntax--other.syntax--unit {
+  color: #d19a66;
+}
+.syntax--storage {
+  color: #c678dd;
+}
+.syntax--storage.syntax--type.syntax--annotation,
+.syntax--storage.syntax--type.syntax--primitive {
+  color: #c678dd;
+}
+.syntax--storage.syntax--modifier.syntax--package,
+.syntax--storage.syntax--modifier.syntax--import {
+  color: #abb2bf;
+}
+.syntax--constant {
+  color: #d19a66;
+}
+.syntax--constant.syntax--variable {
+  color: #d19a66;
+}
+.syntax--constant.syntax--character.syntax--escape {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--numeric {
+  color: #d19a66;
+}
+.syntax--constant.syntax--other.syntax--color {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--other.syntax--symbol {
+  color: #56b6c2;
+}
+.syntax--variable {
+  color: #e06c75;
+}
+.syntax--variable.syntax--interpolation {
+  color: #be5046;
+}
+.syntax--variable.syntax--parameter {
+  color: #abb2bf;
+}
+.syntax--string {
+  color: #98c379;
+}
+.syntax--string.syntax--regexp {
+  color: #56b6c2;
+}
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
+  color: #e5c07b;
+}
+.syntax--string.syntax--other.syntax--link {
+  color: #e06c75;
+}
+.syntax--punctuation.syntax--definition.syntax--comment {
+  color: #5c6370;
+}
+.syntax--punctuation.syntax--definition.syntax--method-parameters,
+.syntax--punctuation.syntax--definition.syntax--function-parameters,
+.syntax--punctuation.syntax--definition.syntax--parameters,
+.syntax--punctuation.syntax--definition.syntax--separator,
+.syntax--punctuation.syntax--definition.syntax--seperator,
+.syntax--punctuation.syntax--definition.syntax--array {
+  color: #abb2bf;
+}
+.syntax--punctuation.syntax--definition.syntax--heading,
+.syntax--punctuation.syntax--definition.syntax--identity {
+  color: #61afef;
+}
+.syntax--punctuation.syntax--definition.syntax--bold {
+  color: #e5c07b;
+  font-weight: bold;
+}
+.syntax--punctuation.syntax--definition.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--punctuation.syntax--section.syntax--embedded {
+  color: #be5046;
+}
+.syntax--punctuation.syntax--section.syntax--method,
+.syntax--punctuation.syntax--section.syntax--class,
+.syntax--punctuation.syntax--section.syntax--inner-class {
+  color: #abb2bf;
+}
+.syntax--support.syntax--class {
+  color: #e5c07b;
+}
+.syntax--support.syntax--type {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function.syntax--any-method {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--function {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--name.syntax--section {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--tag {
+  color: #e06c75;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #d19a66;
+}
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #61afef;
+}
+.syntax--meta.syntax--class {
+  color: #e5c07b;
+}
+.syntax--meta.syntax--class.syntax--body {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--method-call,
+.syntax--meta.syntax--method {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--definition.syntax--variable {
+  color: #e06c75;
+}
+.syntax--meta.syntax--link {
+  color: #d19a66;
+}
+.syntax--meta.syntax--require {
+  color: #61afef;
+}
+.syntax--meta.syntax--selector {
+  color: #c678dd;
+}
+.syntax--meta.syntax--separator {
+  background-color: #373b41;
+  color: #abb2bf;
+}
+.syntax--meta.syntax--tag {
+  color: #abb2bf;
+}
+.syntax--underline {
+  text-decoration: underline;
+}
+.syntax--none {
+  color: #abb2bf;
+}
+.syntax--invalid.syntax--deprecated {
+  color: #523d14 !important;
+  background-color: #e0c285 !important;
+}
+.syntax--invalid.syntax--illegal {
+  color: #ffffff !important;
+  background-color: #e05252 !important;
+}
+.syntax--markup.syntax--bold {
+  color: #d19a66;
+  font-weight: bold;
+}
+.syntax--markup.syntax--changed {
+  color: #c678dd;
+}
+.syntax--markup.syntax--deleted {
+  color: #e06c75;
+}
+.syntax--markup.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--markup.syntax--heading {
+  color: #e06c75;
+}
+.syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+  color: #61afef;
+}
+.syntax--markup.syntax--link {
+  color: #c678dd;
+}
+.syntax--markup.syntax--inserted {
+  color: #98c379;
+}
+.syntax--markup.syntax--quote {
+  color: #d19a66;
+}
+.syntax--markup.syntax--raw {
+  color: #98c379;
+}
+.syntax--source.syntax--c .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cpp .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cs .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--css .syntax--property-name,
+.syntax--source.syntax--css .syntax--property-value {
+  color: #828997;
+}
+.syntax--source.syntax--css .syntax--property-name.syntax--support,
+.syntax--source.syntax--css .syntax--property-value.syntax--support {
+  color: #abb2bf;
+}
+.syntax--source.syntax--gfm .syntax--markup {
+  -webkit-font-smoothing: auto;
+}
+.syntax--source.syntax--gfm .syntax--link .syntax--entity {
+  color: #61afef;
+}
+.syntax--source.syntax--go .syntax--storage.syntax--type.syntax--string {
+  color: #c678dd;
+}
+.syntax--source.syntax--ini .syntax--keyword.syntax--other.syntax--definition.syntax--ini {
+  color: #e06c75;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--type {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--keyword.syntax--operator.syntax--instanceof {
+  color: #c678dd;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair {
+  color: #e06c75;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair > .syntax--punctuation {
+  color: #abb2bf;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--delete,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--in,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--of,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--instanceof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--new,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--typeof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--void {
+  color: #c678dd;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation.syntax--string {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
+  color: #98c379;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--constant.syntax--language.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--constant.syntax--language.syntax--json {
+  color: #56b6c2;
+}
+.syntax--source.syntax--ruby .syntax--constant.syntax--other.syntax--symbol > .syntax--punctuation {
+  color: inherit;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--logical.syntax--python {
+  color: #c678dd;
+}
+.syntax--source.syntax--python .syntax--variable.syntax--parameter {
+  color: #d19a66;
+}
+</style>
+  </head>
+  <body class='markdown-preview' data-use-github-style><h2 id="ap-ndice-introducci-n-a-la-programaci-n-en-c-">Apéndice: Introducción a la programación en C++</h2>
+<p>Veamos una breve introducción a la programación, aplicada a Arduino pero que es común con muchos lenguajes en concreto C++</p>
+<h2 id="comentarios">Comentarios</h2>
+<p>Un comentario es una línea que no influye en nuestro programa pero que nos sirve para documentar nuestro código. Es muy importante comentar nuestro código, puesto que nos ayudará a entender lo que estamos haciendo y si pensamos compartirlo con más gente, les facilitará enormemente la labor de comprender lo que pretendemos hacer.</p>
+<p>Existen 2 tipos de comentarios:</p>
+<ul>
+<li><p>El comentario de bloque, todo el contenido entre los símbolos /<em> y
+</em>/ será tomado como contenido del comentario</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>/*&nbsp;Hola&nbsp;esto&nbsp;es&nbsp;un&nbsp;comentario&nbsp;tan&nbsp;largo&nbsp;y&nbsp;extenso&nbsp;que&nbsp;no&nbsp;cabe&nbsp;en</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>una&nbsp;sola&nbsp;línea.&nbsp;*/</span></span></span></div></pre></li>
+<li><p>Línea de comentario: a partir de las dos barras // se ignorará el
+contenido hasta la siguiente línea</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>//&nbsp;Este&nbsp;es&nbsp;un&nbsp;comentario&nbsp;de&nbsp;línea</span></span></span></div></pre></li>
 </ul>
-<h2 dir="ltr"><span style="font-size: 19px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Array</span></h2><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Un array es una agrupación de variables con un tipo y un tamaño determinados. Podemos acceder a cada elemento individualmente por medio del operador [], indicando la posición. Empiezan en la posición 0 y la última será la que indica su longitud menos 1.</span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">int miArray[5]; //Declaramos un array de 5 elementos enteros</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">int miOtroArray[]={1,23,2}; <span class="Apple-tab-span" style="white-space: pre;"> </span>// Declaramos un array de 3 elementos con</span></p>
-<p dir="ltr" style="margin-left: 180pt; text-indent: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">// los elementos asignados</span></p>
-<h2 dir="ltr"><span style="font-size: 19px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Constantes</span></h2><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Son variables a las que no podemos modificar al valor. Algunos ejemplos:</span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br>
-<p dir="ltr" style="margin-left: 72pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">true/false</span></p>
-<p dir="ltr" style="margin-left: 72pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">HIGH/LOW</span></p>
-<p dir="ltr" style="margin-left: 72pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">INPUT/OUTPUT</span></p><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Conviene usarlas para evitar confusiones.</span><br>
-<h2 dir="ltr"><span style="font-size: 19px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Funciones</span></h2><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Una función es un conjunto de instrucciones agrupadas para un nombre, al que le pasaremos unos argumentos y devolverá un valor.</span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">¿Por qué usamos funciones?</span><br>
-<ul style="margin-top: 0pt; margin-bottom: 0pt;">
-  <li style="list-style-type: disc; font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Cuando repetimos un fragmento de código</span></li>
-  <li style="list-style-type: disc; font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Ahorro de espacio</span></li>
-  <li style="list-style-type: disc; font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Estructuración</span></li>
+<h2 id="bloques">Bloques</h2>
+<p>Un bloque es un conjunto de líneas de código que se encuentran encerradas entre dos llaves\</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>{&nbsp;…&nbsp;}</span></span></span></div></pre><p>Más adelante veremos que determinadas sentencias de control incluyen bloques de instrucciones, como por ejemplo las instrucciones de control o las de decisión\</p>
+<h2 id="variables">Variables</h2>
+<p>Una variables es una forma de etiquetar y guardar un valor. El valor que contiene puede ser de diferentes tipos, como puede ser un número entero, un número decimal, o un carácter.</p>
+<p>Las variables conservan su valor hasta que lo modificamos. Podemos modificar su valor y a partir de ese momento contendrá ese nuevo valor.</p>
+<p>El tipo de la variable será definido cuando declaramos la variable por primera vez y a partir de ahí no se modificará. Definiremos la asignación como el momento en que le damos valor a la variable. Podemos declarar y asignar un valor en la misma sentencia. Veamos ejemplos de declaraciones y asignaciones:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>int&nbsp;a=10;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>float&nbsp;c=10.2;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>int&nbsp;b;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>b=15;</span></span></span></div></pre><p>Las variables tiene un ámbito (scope en inglés) que define la zona del código donde existen. Fuera de esta zona no podemos acceder a su valor.</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>int&nbsp;a=10;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>void&nbsp;prueba()&nbsp;&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>float&nbsp;b=10.2*a;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre><p>En este ejemplo la variable <em>b</em> sólo está definida dentro de la función prueba, es decir, no podremos usarla fuera de la misma. En cambio <em>a</em>, al estar definida fuera, también puede ser usada dentro.</p>
+<p>Puedes encontrar más ejemplos en la <a href="http://www.Arduino.cc/en/Tutorial/Variables">página de Arduino</a>.</p>
+<h2 id="tipos-de-variables">Tipos de variables</h2>
+<p>Veamos algunos de los tipos de variables existentes. Cada tipo determinado, tiene un rango y una precisión:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>byte:&nbsp;8bits&nbsp;0&nbsp;a&nbsp;255</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>int:&nbsp;16bits&nbsp;-32768&nbsp;a&nbsp;32767</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>word:&nbsp;16bits&nbsp;0&nbsp;a&nbsp;65535</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>long:&nbsp;32bits&nbsp;-2x10\^6&nbsp;a&nbsp;2x10\^6</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>float:&nbsp;guarda&nbsp;decimales&nbsp;-3.4x10\^34&nbsp;a&nbsp;3.4x10\^34</span></span></span></div></pre><h2 id="-cuidado-con-los-n-meros-negativos-cuidado-con-pasarnos-">¡¡¡Cuidado con los números negativos!!! ¡¡Cuidado con pasarnos!!</h2>
+<p>Cuando una variable llega a su límite, tanto superior, como inferior se produce un desbordamiento y continua por el otro límite. Por ejemplo si tenemos una variable de tipo word con valor 0 y le restamos 1 ¡¡¡pasará a tener el valor 65535!!!</p>
+<h2 id="operadores-aritm-ticos">Operadores aritméticos</h2>
+<p>Representa la operación que se realizará entre los valores de la expresión:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>+,&nbsp;-,&nbsp;\*,&nbsp;/,&nbsp;%&nbsp;(módulo,&nbsp;el&nbsp;resto&nbsp;de&nbsp;la&nbsp;división&nbsp;entre&nbsp;los&nbsp;valores)</span></span></span></div></pre><p>Ejemplos:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>a=a+3;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>b=a/3;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>c=b%3;</span></span></span></div></pre><h2 id="operadores">Operadores</h2>
+<ul>
+<li>Operadores Booleanos: &amp;&amp; (AND / Y), || (OR / O ), !(NOT / NO)   Representan las operaciones lógicas que podemos aplicar a las     condiciones</li>
+<li>Operadores de acceso a punteros: *, &amp; Los usaremos para acceder a memoria</li>
+<li>Operadores de bits: &amp;, |, \^, ~, \&lt;\&lt;, >> Permiten manipular los bits individuales de las variables representadas en <a href="http://es.wikipedia.org/wiki/Binario">lenguaje     binario</a></li>
+<li>Operadores compuestos:</li>
+<li>Incremento/decremento de variables: ++, -- Incrementan/decrementan el valor de la variable</li>
+<li>Asignación y operación: +=, -=, *=, /=, &amp;=, |= Realizan la     operación indicada y luego la asignación del resultado a la variable</li>
 </ul>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">tipo funcion(tipo argumento 1, tipo argumento 2)</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">{</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">}</span></p>
-<h2 dir="ltr"><span style="font-size: 19px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Librerias</span></h2><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Cuando vamos a reutilizar varias veces un código puede ser buena idea que creemos una librería, que no es más que una colección de codigo que empaquetamos de una manera concreta y cuyas funciones podemos utilizar sin más que incluirlas en nuestro código. En el ejemplo se incluye la librería serie que se usa para comunicar el pc con arduino.</span><br><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">#include &lt;serial.h&gt;</span></p><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Existen muchas librerías cuyo uso iremos viendo a lo largo del curso</span><br>
-<h2 dir="ltr"><span style="font-size: 19px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Estructuras de control</span></h2><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Son aquellas estructuras que nos permiten modificar el flujo de ejecución de nuestro programa, es decir el orden en el que se ejecutan las sentencias.</span><br>
-<h2 dir="ltr"><span style="font-size: 19px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Sentencias condicionales</span></h2>
-<h3 dir="ltr"><span style="font-size: 16px; font-family: arial; color: rgb(102, 102, 102); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Sentencia if </span></h3><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Ejecutaremos un código si se cumple la condición y otro distinto si no se cumple</span><br>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">if (condición)</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">{</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> // código si se cumple</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">}</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">else</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">{</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> // código si no se cumple</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">}</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><br></span></p><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Ejemplo</span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">if ((pin4Entrada &lt; 500) &amp;&amp; (pin4Entrada&gt;100))</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">{</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> // código A</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">}</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">else</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">{</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> // código B</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">}</span></p><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br>
-<h3 dir="ltr"><span style="font-size: 16px; font-family: arial; color: rgb(102, 102, 102); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Sentencia switch</span></h3><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Dependiendo del valor de una variable ejecutaremos un código distinto</span><br>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">switch (var) {</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span class="Apple-tab-span" style="white-space: pre;"> </span>case 1:</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> <span class="Apple-tab-span" style="white-space: pre;"> </span>//hacemos algo si var es 1</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> <span class="Apple-tab-span" style="white-space: pre;"> </span>break;</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span class="Apple-tab-span" style="white-space: pre;"> </span>case 2:</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> <span class="Apple-tab-span" style="white-space: pre;"> </span>//hacemos algo si var es 2</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> <span class="Apple-tab-span" style="white-space: pre;"> </span>break;</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span class="Apple-tab-span" style="white-space: pre;"> </span>default:</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> <span class="Apple-tab-span" style="white-space: pre;"> </span>// si nada concuerda, default</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> <span class="Apple-tab-span" style="white-space: pre;"> </span>// default es opcional</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> }</span></p>
-<h2 dir="ltr"><span style="font-size: 19px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Bucles</span></h2><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Realizamos un bucle siempre que queremos que se repita un determinado fragmento de código. Todo bucle tiene una condición que determinará las veces que se repetirá el código.</span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Existen 3 tipos de bucles:</span><br>
-<h3 dir="ltr"><span style="font-size: 16px; font-family: arial; color: rgb(102, 102, 102); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Bucle for</span></h3><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Es el más natural para usar cuando la iteración tiene un número claro de repeticiones:</span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">for (inicializacion; condicion; incremento) {</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">//sentencia(s);</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">}</span></p><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">por ejemplo</span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">for (int i=0;i&lt;20;i=i+1) {</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">//sentencia(s);</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">}</span></p><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">que se realizará 20 veces</span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br><span style="font-size: 16px; font-family: arial; color: rgb(102, 102, 102); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Bucle while</span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">El bucle while ejecutará las sentencias de su bloque mientras que la condición inicial se cumpla</span><br>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">while(expresion){</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> // sentencia(s);</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">}</span></p><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Si la condición no se cumple inicialmente no se realizará ninguna iteración.</span><br>
-<h3 dir="ltr"><span style="font-size: 16px; font-family: arial; color: rgb(102, 102, 102); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Bucle do</span></h3><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">En este bucle la comprobación se hace después de la iteración, por lo que tenemos garantizado que al menos se ejecutará una vez la iteración</span><br>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">do</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">{</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span class="Apple-tab-span" style="white-space: pre;"> </span>//sentencia(s)</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">} while (condicion);</span></p><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br>
-<h3 dir="ltr"><span style="font-size: 16px; font-family: arial; color: rgb(102, 102, 102); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Saliendo de los bucles</span></h3><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">De un bucle saldremos cuando no se verifique la condición, pero también podemos formar la salida usando las siguientes instrucciones</span><br>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/Break"><span style="font-size: 15px; font-family: consolas; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">break</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> <span class="Apple-tab-span" style="white-space: pre;"> </span><span class="Apple-tab-span" style="white-space: pre;"> </span>// sale del bucle</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/Continue"><span style="font-size: 15px; font-family: consolas; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">continue</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> <span class="Apple-tab-span" style="white-space: pre;"> </span><span class="Apple-tab-span" style="white-space: pre;"> </span>// salta el paso actual del bucle</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/Return"><span style="font-size: 15px; font-family: consolas; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">return</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> <span class="Apple-tab-span" style="white-space: pre;"> </span><span class="Apple-tab-span" style="white-space: pre;"> </span>// sale de la función</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/Goto"><span style="font-size: 15px; font-family: consolas; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">goto</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> label <span class="Apple-tab-span" style="white-space: pre;"> </span>//salta a la etiqueta label</span></p><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">for(int i=0;i&lt;10;i++)</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">{</span></p>
-<p dir="ltr" style="margin-left: 72pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">if (bsalto&gt;0)</span></p>
-<p dir="ltr" style="margin-left: 72pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> continue; // Se salta el código del resto de la iteración</span></p>
-<p dir="ltr" style="margin-left: 72pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">else</span></p>
-<p dir="ltr" style="margin-left: 72pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> break; //sale del bucle</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">}</span></p><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br>
-<h2 dir="ltr"><span style="font-size: 19px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">String: o cadenas de caracteres</span></h2><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Para facilitar el trabajo con cadenas de caracteres, existe la case </span><a href="http://arduino.cc/en/Reference/StringObject"><span style="font-size: 15px; font-family: arial; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">String</span></a><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">. Tiene los siguientes métodos</span><br><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/StringCompareTo"><span style="font-size: 15px; font-family: consolas; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">compareTo</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() <span class="Apple-tab-span" style="white-space: pre;"> </span>//compara dos cadenas</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/StringConcat"><span style="font-size: 15px; font-family: consolas; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">concat</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() <span class="Apple-tab-span" style="white-space: pre;"> </span><span class="Apple-tab-span" style="white-space: pre;"> </span>// concatena</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/StringEndsWith"><span style="font-size: 15px; font-family: consolas; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">endsWith</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() <span class="Apple-tab-span" style="white-space: pre;"> </span>// comprueba si termina por...</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/StringEquals"><span style="font-size: 15px; font-family: consolas; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">equals</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() <span class="Apple-tab-span" style="white-space: pre;"> </span><span class="Apple-tab-span" style="white-space: pre;"> </span>//comprueba si son iguales</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/StringEqualsIgnoreCase"><span style="font-size: 15px; font-family: consolas; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">equalsIgnoreCase</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() //comprueba igualdad ignorando mayúsculas y minúsculas</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/StringIndexOf"><span style="font-size: 15px; font-family: consolas; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">indexOf</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() // devuelve la primera posición del carácter que le pasamos</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/StringLastIndexOf"><span style="font-size: 15px; font-family: consolas; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">lastIndexOf</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() // devuelve la última posición del carácter que le pasamos</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/StringLength"><span style="font-size: 15px; font-family: consolas; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">length</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() //longitud de la cadena</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/StringReplace"><span style="font-size: 15px; font-family: consolas; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">replace</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() //reemplaza</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/StringStartsWith"><span style="font-size: 15px; font-family: consolas; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">startsWith</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() //comprueba si empieza por</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/StringSubstring"><span style="font-size: 15px; font-family: consolas; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">substring</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() // devuelve un fragmento de la cadena original</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/StringToLowerCase"><span style="font-size: 15px; font-family: consolas; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">toLowerCase</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() //convierte a minúsculas<br class="kix-line-break"></span><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/StringToUpperCase"><span style="font-size: 15px; font-family: consolas; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">toUpperCase</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() //convierte a mayúsculas</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/StringTrim"><span style="font-size: 15px; font-family: consolas; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">trim</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() //elimina los espacios iniciales y finales</span></p> <span style="font-size: 15px; font-family: georgia; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br>
-<h2 dir="ltr"><span style="font-size: 19px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Conversiones de tipos</span></h2><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Muchas veces es necesario convertir valores de variables de tipos diferentes. Para eso existen en arduino un conjunto de funciones que nos permiten hacer estas transformaciones con garantías:</span><br>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">char() // Convierte a un carácterer</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">byte() // Convierte a un byte</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">int() // Convierte a un int</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">word() // Convierte a un word</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">long() // Convierte a un long</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">float() // Convierte a un número decimal</span></p><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Por ejemplo, veamos como convierte a entero. Obviamente perdemos la parte decimal.</span><br>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">float a=2.4;</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">int b=int(a);</span></p><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br>
-<h2 dir="ltr"><span style="font-size: 19px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Funciones matemáticas</span></h2><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Aunque el procesador de arduino no excesivamente potente en lo que a cálculo matemático se refiere, existen librerías que nos permiten hacer la mayoría de las funciones matemáticas usuales:</span><br>
-<h3 dir="ltr"><span style="font-size: 16px; font-family: arial; color: rgb(102, 102, 102); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Matemáticas</span></h3>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/Min"><span style="font-size: 15px; font-family: arial; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">min</span></a><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(a,b) <span class="Apple-tab-span" style="white-space: pre;"> </span>// mínimo de a y b</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/Max"><span style="font-size: 15px; font-family: arial; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">max</span></a><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(a,b)<span class="Apple-tab-span" style="white-space: pre;"> </span>// máximo de a y b</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/Abs"><span style="font-size: 15px; font-family: arial; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">abs</span></a><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(a)<span class="Apple-tab-span" style="white-space: pre;"> </span><span class="Apple-tab-span" style="white-space: pre;"> </span>// valor absoluto d ea</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/Pow"><span style="font-size: 15px; font-family: arial; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">pow</span></a><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(a,b)<span class="Apple-tab-span" style="white-space: pre;"> </span>// devuelve a^b</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/Sqrt"><span style="font-size: 15px; font-family: arial; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">sqrt</span></a><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(a)<span class="Apple-tab-span" style="white-space: pre;"> </span>// devuelve la raiz cuadrada de a</span></p>
-<h3 dir="ltr"><span style="font-size: 16px; font-family: arial; color: rgb(102, 102, 102); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Trigonometría</span></h3>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/Sin"><span style="font-size: 15px; font-family: arial; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">sin</span></a><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(a)<span class="Apple-tab-span" style="white-space: pre;"> </span><span class="Apple-tab-span" style="white-space: pre;"> </span>// calcula el seno de a<span class="Apple-tab-span" style="white-space: pre;"> </span><span class="Apple-tab-span" style="white-space: pre;"> </span></span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/Cos"><span style="font-size: 15px; font-family: arial; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">cos</span></a><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(a)<span class="Apple-tab-span" style="white-space: pre;"> </span><span class="Apple-tab-span" style="white-space: pre;"> </span>// calcula el coseno de a</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/Tan"><span style="font-size: 15px; font-family: arial; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">tan</span></a><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(a)<span class="Apple-tab-span" style="white-space: pre;"> </span><span class="Apple-tab-span" style="white-space: pre;"> </span>// calcula la tangente de a</span></p>
-<h3 dir="ltr"><span style="font-size: 16px; font-family: arial; color: rgb(102, 102, 102); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Números aleatorios</span></h3>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/RandomSeed"><span style="font-size: 15px; font-family: arial; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">randomSeed</span></a><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(a)<span class="Apple-tab-span" style="white-space: pre;"> </span>// inicializa los número aleatorios con a</span></p>
-<p dir="ltr" style="margin-left: 36pt; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><a href="http://arduino.cc/en/Reference/Random"><span style="font-size: 15px; font-family: arial; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">random</span></a><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">()<span class="Apple-tab-span" style="white-space: pre;"> </span><span class="Apple-tab-span" style="white-space: pre;"> </span>// devuelve un número aleatorio</span></p><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Obviamente, dada la poca capacidad de cálculo de arduino, el usar estas funciones matemáticas complejas es muy costoso computacionalmente, por lo que se debería de evitar u optimizar su uso.</span><br>
-<h2 dir="ltr"><span style="font-size: 19px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Introducción a la programación de objetos</span></h2><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Un objeto es un conjunto de funciones (métodos) y variables (atributos) que trataremos de una </span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">forma global.</span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">El trabajar con objetos nos permite encapsular (esconder las interioridades), mostrando un interface (una vista) con lo que permitimos que otros vean (atributos públicos) y usen (métodos públicos) de nosotros.</span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">A los que los usamos nos facilitan el trabajo al agrupar las funcionalidades.</span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Por ejemplo el objeto Serial, permite trabajar con todo lo relacionado con el manejo de los puertos serie:</span><br>
-<ul style="margin-top: 0pt; margin-bottom: 0pt;">
-  <li style="list-style-type: disc; font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Serial.print enviará por el puerto serie</span></li>
-  <li style="list-style-type: disc; font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Serial.read leerá por el puerto serie</span></li>
-  <li style="list-style-type: disc; font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Serial.write escribirá...</span></li>
-</ul><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">La mayoría de las librerías de arduino están formadas por objetos.</span><br>
-<h2 dir="ltr"><span style="font-size: 19px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">¿Donde encontrar más información?</span></h2><br>
-<ul style="margin-top: 0pt; margin-bottom: 0pt;">
-  <li style="list-style-type: disc; font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><a href="http://arduino.cc/"><span style="font-size: 15px; font-family: arial; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">arduino</span></a></li>
-  <li style="list-style-type: disc; font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><a href="http://arduino.cc/playground/uploads/Main/arduino_notebook_v1-1.pdf"><span style="font-size: 15px; font-family: arial; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">arduino programing notebook (inglés)</span></a></li>
-  <li style="list-style-type: disc; font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><a href="http://books.openlibra.com/pdf/Manual-Programacion-Arduino.pdf"><span style="font-size: 15px; font-family: arial; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">Guía de programación de arduino (español)</span></a></li>
-  <li style="list-style-type: disc; font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><a href="http://www.freeduino.org/"><span style="font-size: 15px; font-family: arial; color: rgb(17, 85, 204); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">freeduino</span></a><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span></li>
-</ul></b><br class="Apple-interchange-newline">
+<h2 id="array">Array</h2>
+<p>Un array es una agrupación de variables con un tipo y un tamaño determinados. Podemos acceder a cada elemento individualmente por medio del operador [], indicando la posición. Empiezan en la posición 0 y la última será la que indica su longitud menos 1.</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>int&nbsp;miArray[5];&nbsp;//Declaramos&nbsp;un&nbsp;array&nbsp;de&nbsp;5&nbsp;elementos&nbsp;enteros</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>int&nbsp;miOtroArray[]={1,23,2};&nbsp;//&nbsp;Declaramos&nbsp;un&nbsp;array&nbsp;de&nbsp;3&nbsp;elementos&nbsp;con&nbsp;sus&nbsp;valores&nbsp;asignados</span></span></span></div></pre><h2 id="constantes">Constantes</h2>
+<p>Son variables a las que no podemos modificar al valor. Algunos ejemplos:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>true/false</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>HIGH/LOW</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>INPUT/OUTPUT</span></span></span></div></pre><p>Conviene usarlas para evitar confusiones.</p>
+<h2 id="funciones">Funciones</h2>
+<p>Una función es un conjunto de instrucciones agrupadas para un nombre, al que le pasaremos unos argumentos y devolverá un valor.</p>
+<p>¿Por qué usamos funciones?</p>
+<ul>
+<li>Cuando repetimos un fragmento de código</li>
+<li>Ahorro de espacio</li>
+<li>Estructuración</li>
+</ul>
+<p>El formato siempre es:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>tipo&nbsp;funcion(tipo&nbsp;argumento&nbsp;1,&nbsp;tipo&nbsp;argumento&nbsp;2)&nbsp;&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>//&nbsp;Codigo</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre><h2 id="librer-as">Librerías</h2>
+<p>Cuando vamos a reutilizar varias veces un código puede ser buena idea que creemos una librería, que no es más que una colección de código que empaquetamos de una manera concreta y cuyas funciones podemos utilizar sin más que incluirlas en nuestro código. En el ejemplo se incluye la librería serie que se usa para comunicar el pc con Arduino.</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>#include&nbsp;&lt;Serial.h&gt;</span></span></span></div></pre><p>Existen muchas librerías cuyo uso iremos viendo a lo largo del curso</p>
+<h2 id="estructuras-de-control">Estructuras de control</h2>
+<p>Son aquellas estructuras que nos permiten modificar el flujo de ejecución de nuestro programa, es decir el orden en el que se ejecutan las sentencias.</p>
+<h2 id="sentencias-condicionales">Sentencias condicionales</h2>
+<p>Permiten decidir si se ejecutan o no, unas sentencias en fnción de que se cumplan determinadas condiciones</p>
+<h3 id="sentencia-if">Sentencia if</h3>
+<p>Ejecutaremos un código si se cumple la condición y otro distinto si no se cumple</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>if&nbsp;(condición){</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>//&nbsp;código&nbsp;si&nbsp;se&nbsp;cumple</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>else{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>//&nbsp;código&nbsp;si&nbsp;no&nbsp;se&nbsp;cumple</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre><p>Ejemplo</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>if&nbsp;((valorEntrada&nbsp;&lt;&nbsp;500)&nbsp;&amp;&amp;&nbsp;(valorEntrada&gt;100)){</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>//&nbsp;código&nbsp;A</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>else{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>//&nbsp;código&nbsp;B</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre><h3 id="sentencia-switch">Sentencia switch</h3>
+<p>Dependiendo del valor de una variable ejecutaremos un código distinto</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>switch&nbsp;(var)&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>case&nbsp;1:</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>//hacemos&nbsp;algo&nbsp;si&nbsp;var&nbsp;es&nbsp;1</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>case&nbsp;2:</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>//hacemos&nbsp;algo&nbsp;si&nbsp;var&nbsp;es&nbsp;2</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>default:</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>//&nbsp;si&nbsp;nada&nbsp;concuerda,&nbsp;default</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;default&nbsp;es&nbsp;opcional</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre><h2 id="bucles">Bucles</h2>
+<p>Realizamos un bucle siempre que queremos que se repita un determinado fragmento de código. Todo bucle tiene una condición que determinará las veces que se repetirá el código.</p>
+<p>Existen 3 tipos de bucles:</p>
+<h3 id="bucle-for">Bucle for</h3>
+<p>Es el más natural para usar cuando la iteración tiene un número claro de repeticiones:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>for&nbsp;(inicializacion;&nbsp;condicion;&nbsp;incremento)&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>//sentencia(s);</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre><p>por ejemplo</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>for&nbsp;(int&nbsp;i=0;i\&lt;20;i=i+1)&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>//sentencia(s);</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre><p>que se realizará 20 veces</p>
+<h3 id="bucle-while">Bucle while</h3>
+<p>El bucle while ejecutará las sentencias de su bloque mientras que la condición inicial se cumpla</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>while(expresion){</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>//&nbsp;sentencia(s);</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre><p>Si la condición no se cumple inicialmente no se realizará ninguna iteración.</p>
+<h3 id="bucle-do">Bucle do</h3>
+<p>En este bucle la comprobación se hace después de la iteración, por lo que tenemos garantizado que al menos se ejecutará una vez la iteración</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>do&nbsp;&nbsp;&nbsp;&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>//sentencia(s)</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}&nbsp;while&nbsp;(condicion);</span></span></span></div></pre><h3 id="-como-salir-de-los-bucles-">¿Como salir de los bucles?</h3>
+<p>De un bucle saldremos cuando no se verifique la condición, pero también podemos formar la salida usando las siguientes instrucciones</p>
+<ul>
+<li><p><a href="http://Arduino.cc/en/Reference/Break">break</a> // sale del bucle</p>
+</li>
+<li><p><a href="http://Arduino.cc/en/Reference/Continue">continue</a> // salta el paso actual del bucle</p>
+</li>
+<li><p><a href="http://Arduino.cc/en/Reference/Return">return</a> // sale de la función</p>
+</li>
+<li><p><a href="http://Arduino.cc/en/Reference/Goto">goto</a> label //salta a la etiqueta <em>label</em></p>
+</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>for(int&nbsp;i=0;i\&lt;10;i++){</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>if&nbsp;(bsalto\&gt;0)</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>continue;&nbsp;//&nbsp;Se&nbsp;salta&nbsp;el&nbsp;código&nbsp;del&nbsp;resto&nbsp;de&nbsp;la&nbsp;iteración</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>else</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>break;&nbsp;//sale&nbsp;del&nbsp;bucle</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre><h2 id="string-o-cadenas-de-caracteres">String: o cadenas de caracteres</h2>
+<p>Para facilitar el trabajo con cadenas de caracteres, existe la clase <a href="http://Arduino.cc/en/Reference/StringObject">String</a>. Tiene (entre otros muchos) los siguientes métodos:</p>
+<ul>
+<li><p><a href="http://Arduino.cc/en/Reference/StringCompareTo">compareTo</a>() //compara dos cadenas</p>
+</li>
+<li><p><a href="http://Arduino.cc/en/Reference/StringConcat">concat</a>() // concatena</p>
+</li>
+<li><p><a href="http://Arduino.cc/en/Reference/StringEndsWith">endsWith</a>() // comprueba si termina por...</p>
+</li>
+<li><p><a href="http://Arduino.cc/en/Reference/StringEquals">equals</a>() //comprueba si son iguales</p>
+</li>
+<li><p><a href="http://Arduino.cc/en/Reference/StringEqualsIgnoreCase">equalsIgnoreCase</a>() // comprueba igualdad ignorando mayúsculas y minúsculas</p>
+</li>
+<li><p><a href="http://Arduino.cc/en/Reference/StringIndexOf">indexOf</a>() // devuelve la primera posición del carácter que le pasamos</p>
+</li>
+<li><p><a href="http://Arduino.cc/en/Reference/StringLastIndexOf">lastIndexOf</a>() // devuelve la última posición del carácter que le pasamos</p>
+</li>
+<li><p><a href="http://Arduino.cc/en/Reference/StringLength">length</a>() // longitud de la cadena</p>
+</li>
+<li><p><a href="http://Arduino.cc/en/Reference/StringReplace">replace</a>() // reemplaza</p>
+</li>
+<li><p><a href="http://Arduino.cc/en/Reference/StringStartsWith">startsWith</a>() // comprueba si empieza por</p>
+</li>
+<li><p><a href="http://Arduino.cc/en/Reference/StringSubstring">substring</a>() // devuelve un fragmento de la cadena original</p>
+</li>
+<li><p><a href="http://Arduino.cc/en/Reference/StringToLowerCase">toLowerCase</a>() // convierte a minúsculas</p>
+</li>
+<li><p><a href="http://Arduino.cc/en/Reference/StringToUpperCase">toUpperCase</a>() // convierte a mayúsculas</p>
+</li>
+<li><p><a href="http://Arduino.cc/en/Reference/StringTrim">trim</a>() // elimina los espacios iniciales y finales</p>
+</li>
+</ul>
+<h2 id="conversiones-de-tipos">Conversiones de tipos</h2>
+<p>Muchas veces es necesario convertir valores de variables de tipos diferentes. Para eso existen en Arduino un conjunto de funciones que nos permiten hacer estas transformaciones con garantías:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>char()&nbsp;//&nbsp;Convierte&nbsp;a&nbsp;un&nbsp;carácterer</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>byte()&nbsp;//&nbsp;Convierte&nbsp;a&nbsp;un&nbsp;byte</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>int()&nbsp;//&nbsp;Convierte&nbsp;a&nbsp;un&nbsp;int</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>word()&nbsp;//&nbsp;Convierte&nbsp;a&nbsp;un&nbsp;word</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>long()&nbsp;//&nbsp;Convierte&nbsp;a&nbsp;un&nbsp;long</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>float()&nbsp;//&nbsp;Convierte&nbsp;a&nbsp;un&nbsp;número&nbsp;decimal</span></span></span></div></pre><p>Por ejemplo, veamos como convierte a entero. Obviamente perdemos la parte decimal.</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>float&nbsp;a=2.4;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>int&nbsp;b=int(a);</span></span></span></div></pre><h2 id="funciones-matem-ticas">Funciones matemáticas</h2>
+<p>Aunque el procesador de Arduino no excesivamente potente en lo que a cálculo matemático se refiere, existen librerías que nos permiten hacer la mayoría de las funciones matemáticas usuales:\</p>
+<h3 id="matem-ticas">Matemáticas</h3>
+<ul>
+<li><p><a href="http://Arduino.cc/en/Reference/Min">min</a>(a,b) // mínimo de a y b</p>
+</li>
+<li><p><a href="http://Arduino.cc/en/Reference/Max">max</a>(a,b) // máximo de a y b</p>
+</li>
+<li><p><a href="http://Arduino.cc/en/Reference/Abs">abs</a>(a) // valor absoluto de a</p>
+</li>
+<li><p><a href="http://Arduino.cc/en/Reference/Pow">pow</a>(a,b) // devuelve a elevado a b</p>
+</li>
+<li><p><a href="http://Arduino.cc/en/Reference/Sqrt">sqrt</a>(a) // devuelve la raiz cuadrada de a</p>
+</li>
+</ul>
+<h3 id="trigonometr-a">Trigonometría</h3>
+<ul>
+<li><p><a href="http://Arduino.cc/en/Reference/Sin">sin</a>(a) // calcula el seno de a</p>
+</li>
+<li><p><a href="http://Arduino.cc/en/Reference/Cos">cos</a>(a) // calcula el coseno de a</p>
+</li>
+<li><p><a href="http://Arduino.cc/en/Reference/Tan">tan</a>(a) // calcula la tangente de a</p>
+</li>
+</ul>
+<h3 id="n-meros-aleatorios">Números aleatorios</h3>
+<ul>
+<li><p><a href="http://Arduino.cc/en/Reference/RandomSeed">randomSeed</a>(a) // inicializa los número aleatorios con a</p>
+</li>
+<li><p><a href="http://Arduino.cc/en/Reference/Random">random</a>() // devuelve un número aleatorio</p>
+</li>
+</ul>
+<p>Obviamente, dada la poca capacidad de cálculo de Arduino, el usar estas funciones matemáticas complejas es muy costoso computacionalmente, por lo que se debería de evitar u optimizar su uso.</p>
+<h2 id="introducci-n-a-la-programaci-n-de-objetos">Introducción a la programación de objetos</h2>
+<p>Un objeto es un conjunto de funciones (métodos) y variables (atributos) que trataremos de una forma global.</p>
+<p>El trabajar con objetos nos permite encapsular (esconder las interioridades), mostrando un interface (una vista) con lo que permitimos que otros vean (atributos públicos) y usen (métodos públicos) de nosotros.</p>
+<p>A los que los usamos nos facilitan el trabajo al agrupar las funcionalidades.</p>
+<p>Por ejemplo el objeto Serial, permite trabajar con todo lo relacionado con el manejo de los puertos serie:</p>
+<ul>
+<li>Serial.print enviará por el puerto serie</li>
+<li>Serial.read leerá por el puerto serie</li>
+<li>Serial.write escribirá...</li>
+</ul>
+<p>La mayoría de las librerías de Arduino están formadas por objetos.</p>
+<h2 id="-donde-encontrar-m-s-informaci-n-">¿Donde encontrar más información?</h2>
+<ul>
+<li><a href="http://Arduino.cc/">Arduino</a></li>
+<li><a href="http://Arduino.cc/playground/uploads/Main/Arduino_notebook_v1-1.pdf">Arduino programing notebook
+(inglés)</a></li>
+<li><a href="http://books.openlibra.com/pdf/Manual-Programacion-Arduino.pdf">Guía de programación de Arduino
+(español)</a></li>
+<li><a href="http://www.freeduino.org/">Freeduino page</a></li>
+</ul></body>
+</html>
